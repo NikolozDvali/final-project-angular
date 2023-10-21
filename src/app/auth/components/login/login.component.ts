@@ -18,7 +18,8 @@ export class LoginComponent {
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
-    private accountService: AccountDataService
+    private accountService: AccountDataService,
+    private router: Router
   ){}
 
   login(){
@@ -37,6 +38,7 @@ export class LoginComponent {
         }else{
           this.accountService.setLoggedInAccout(response);
           this.showErrorMessage = false;
+          this.router.navigate(['/main'])
         }
       }
     );
