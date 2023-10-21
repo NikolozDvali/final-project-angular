@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
+import { IClass } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-posts',
@@ -8,6 +10,18 @@ import { CommonModule } from '@angular/common';
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
-export class PostsComponent {
+export class PostsComponent implements OnInit {
+  classroomData: IClass | undefined;
+  
+  constructor(
+    private classroomService: ClassroomService
+  ){}
 
+  ngOnInit() {
+    this.classroomService.selectedClassData.subscribe(
+      (classdata)=>{
+        this.classroomData = classdata;
+      }
+    )
+  }
 }

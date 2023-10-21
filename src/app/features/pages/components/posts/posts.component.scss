@@ -1,13 +1,17 @@
 .wrapper{
     width: 100%;
     min-height: 400px;
-    background-color: aquamarine;
+
+    max-height: calc(100vh - 70px);
 
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     row-gap: 10px;
 
     padding-top: 20px;
+
+    overflow-y: auto;
+
 
     >div{
         display: flex;
@@ -16,13 +20,39 @@
     }
 
     .posts-header-wrapper{
-        min-height: 300px;
+        height: auto;
 
         .post-header{
             height: 100%;
             width: 700px;
             max-width: 700px;
-            background-color: aqua;
+            background-color: #3b24ba;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 1fr 57%; 
+            overflow: hidden;
+
+            .header-texts{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                background-color: #7CD0FF;
+                height: 100%;
+
+                font-family: "Knewave";
+                font-size: 30px;
+                color: white;
+
+                .classname{
+                    color: #8D83C2;
+                }
+            }
+
+            >img{
+               width: 100%;
+            }
         }
     }
 
@@ -32,7 +62,7 @@
         .feed{
             width: 700px;
             max-width: 700px;
-            height: 400px;
+            height: 900px;
             background-color: violet;
         }
     }
