@@ -160,6 +160,16 @@
           "post_title": "Assignment4",
           "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
           "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Assignment5",
+          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
+          "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Assignment6",
+          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
+          "post_date": "Saturday, 21 October, 2023"
         }
       ]
     }

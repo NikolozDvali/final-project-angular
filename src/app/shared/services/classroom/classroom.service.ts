@@ -55,6 +55,7 @@ export class ClassroomService {
     const data = localStorage.getItem('class/'+id);
     if(data){
       this.setSelectedClassData(JSON.parse(data));
+      return;
     }
 
     this.classFetcher.getClassData(id).subscribe(
