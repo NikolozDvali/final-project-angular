@@ -1,0 +1,98 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    background-color: rgb(51, 132, 181);
+
+  }
+  
+  .form-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+  
+    form {
+        display: flex;
+        flex-direction: column;
+
+        small {
+            color: red;
+        }
+
+
+        p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  
+      div {
+        margin: 10px 0;
+        
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+  
+          &::placeholder {
+            color: #999;
+          }
+
+          &:focus{
+            outline: 2px solid #007bff;
+          }
+        }
+      }
+  
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+        &:disabled {
+          background-color: #ccc; // Change the color for disabled state
+          cursor: not-allowed; // Change the cursor style
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: small;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,23 @@
+<section class="wrapper">
+    <section class="form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <p>Login</p>
+
+            <div>
+                <label for="email">Email</label>
+                <input formControlName="email" id="email" type="email" autocomplete="email" placeholder="Email...">
+            </div>
+            
+            <div>
+                <label for="password">Password</label>
+                <input formControlName="password" id="password" type="password" autocomplete="current-password" placeholder="Password...">
+            </div>
+
+            <small *ngIf="showErrorMessage">Email or Password is Incorrect</small>
+            <button type="submit" [disabled]="!loginForm.valid">
+                Login
+            </button>
+            <a [routerLink]="['/auth/register']">Not a user? Register Now</a>
+        </form>
+    </section>
+</section>

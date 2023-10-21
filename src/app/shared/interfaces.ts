@@ -1,0 +1,47 @@
+export interface Account{
+    account_type: string, 
+    account_name: string,
+    account_email: string,
+    account_password: string,
+    account_classes: ClassNames[],
+}
+
+export interface ClassNames{
+    class_id: string,
+    class_name: string,
+}
+
+export interface IAccount extends Account{
+    account_id: string,
+}
+
+export interface Class{
+    class_name: string,
+    class_owner: Owner;
+    class_mambers: Member[],
+    class_posts: IPost[],
+}
+
+export interface IClass extends Class{
+    class_id: string
+}
+
+export interface Owner{
+    owner_id: string,
+    owner_name: string,
+}
+
+export interface Member{
+    member_id: string,
+    member_name: string,
+}
+
+export interface Post{
+    post_title: string,
+    post_text: string,
+    post_date: string,
+}
+
+export interface IPost extends Post{
+    post_id: string,
+}
