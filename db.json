@@ -36,5 +36,21 @@
       "id": 3
     }
   ],
-  "classes": []
+  "classes": [
+    {
+      "class_name": "Math",
+      "class_id": "gdfsgd",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    }
+  ]
 }

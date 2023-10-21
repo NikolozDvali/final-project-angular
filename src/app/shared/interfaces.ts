@@ -47,3 +47,4 @@ export interface IPost extends Post{
 }
 
 export type loggedInAccount = IAccount | undefined;
+export type chosenClass = IClass | undefined;
