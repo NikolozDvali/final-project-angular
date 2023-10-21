@@ -14,11 +14,11 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  tryLogin(email: string, password: string): Observable<boolean>{
+  tryLogin(email: string, password: string): Observable<IAccount | undefined>{
     return this.http.get<IAccount[]>(this.accountsUrl).pipe(
       map((accounts)=>{
         const matchingAccount = accounts.find((account) => account.account_email === email && account.account_password === password);
-        return!!matchingAccount;
+        return matchingAccount;
       })
     )
   }

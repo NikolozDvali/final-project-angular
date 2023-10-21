@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
+import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 
 @Component({
   selector: 'app-login',
@@ -16,19 +17,27 @@ export class LoginComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private accountService: AccountDataService
   ){}
 
   login(){
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
+
+    this.loginForm.reset();
     
     if(!email || !password){
       return;
     }
     this.loginService.tryLogin(email, password).subscribe(
-      (loginResponse)=>{
-        console.log(loginResponse);
+      (response)=>{
+        if(response == undefined){
+          this.showErrorMessage = true;
+        }else{
+          this.accountService.setLoggedInAccout(response);
+          this.showErrorMessage = false;
+        }
       }
     );
   }

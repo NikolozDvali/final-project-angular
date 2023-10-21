@@ -45,3 +45,5 @@ export interface Post{
 export interface IPost extends Post{
     post_id: string,
 }
+
+export type loggedInAccount = IAccount | undefined;
