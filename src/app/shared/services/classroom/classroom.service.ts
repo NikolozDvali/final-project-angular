@@ -20,9 +20,16 @@ export class ClassroomService {
       return;
     }
 
+    const storedData = localStorage.getItem("class/"+class_id);
+    if(storedData){
+      this.chosenClass.next(JSON.parse(storedData));
+      return;
+    }
+
     
     this.classFetcher.getClassData(class_id).subscribe(
       (classData)=>{
+        localStorage.setItem("class/"+class_id, JSON.stringify(classData));
         this.chosenClass.next(classData);
       }
     )
