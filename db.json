@@ -143,6 +143,136 @@
               "grade": 10,
               "date": "Sunday, 22 October, 2023",
               "comment": "Behaved well"
+            },
+            {
+              "grade": 9,
+              "date": "Monday, 27 October, 2023",
+              "comment": "Did good job"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 31 October, 2023",
+              "comment": "Asked good questions"
+            },
+            {
+              "grade": 4,
+              "date": "Thursday, 1 November, 2023",
+              "comment": "Did not have a homework"
+            },
+            {
+              "grade": 10,
+              "date": "Wednesday, 14 November, 2023",
+              "comment": "Was very active"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 1 December, 2023",
+              "comment": "Acted nicely"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 8 December, 2023",
+              "comment": "idk something"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 15 December, 2023",
+              "comment": "I cant think of other stuff. Lets write some long comment to test the ui"
+            },
+            {
+              "grade": 9,
+              "date": "Friday, 31 December, 2023",
+              "comment": "This is getting ridicoulus"
+            },
+            {
+              "grade": 10,
+              "date": "Sunday, 22 October, 2023",
+              "comment": "Behaved well"
+            },
+            {
+              "grade": 9,
+              "date": "Monday, 27 October, 2023",
+              "comment": "Did good job"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 31 October, 2023",
+              "comment": "Asked good questions"
+            },
+            {
+              "grade": 4,
+              "date": "Thursday, 1 November, 2023",
+              "comment": "Did not have a homework"
+            },
+            {
+              "grade": 10,
+              "date": "Wednesday, 14 November, 2023",
+              "comment": "Was very active"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 1 December, 2023",
+              "comment": "Acted nicely"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 8 December, 2023",
+              "comment": "idk something"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 15 December, 2023",
+              "comment": "I cant think of other stuff. Lets write some long comment to test the ui"
+            },
+            {
+              "grade": 9,
+              "date": "Friday, 31 December, 2023",
+              "comment": "This is getting ridicoulus"
+            },
+            {
+              "grade": 10,
+              "date": "Sunday, 22 October, 2023",
+              "comment": "Behaved well"
+            },
+            {
+              "grade": 9,
+              "date": "Monday, 27 October, 2023",
+              "comment": "Did good job"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 31 October, 2023",
+              "comment": "Asked good questions"
+            },
+            {
+              "grade": 4,
+              "date": "Thursday, 1 November, 2023",
+              "comment": "Did not have a homework"
+            },
+            {
+              "grade": 10,
+              "date": "Wednesday, 14 November, 2023",
+              "comment": "Was very active"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 1 December, 2023",
+              "comment": "Acted nicely"
+            },
+            {
+              "grade": 8,
+              "date": "Friday, 8 December, 2023",
+              "comment": "idk something"
+            },
+            {
+              "grade": 10,
+              "date": "Friday, 15 December, 2023",
+              "comment": "I cant think of other stuff. Lets write some long comment to test the ui"
+            },
+            {
+              "grade": 9,
+              "date": "Friday, 31 December, 2023",
+              "comment": "This is getting ridicoulus"
             }
           ]
         }

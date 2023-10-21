@@ -1,11 +1,12 @@
 .wrapper{
     width: 100%;
 
-    max-height: calc(100vh - 70px);
+    height: calc(100% - 70px);
+
     background-color: bisque;
 
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: max-content max-content;
     row-gap: 20px;
 
     padding-top: 20px;

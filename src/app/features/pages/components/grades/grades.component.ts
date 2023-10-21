@@ -12,8 +12,8 @@ import { AccountDataService } from 'src/app/shared/services/accountData/account-
   styleUrls: ['./grades.component.scss']
 })
 export class GradesComponent implements OnInit {
-
   grades: Grade[] = [];
+  selectedGrade: Grade | undefined;
 
   constructor(
     private elementRef: ElementRef,
@@ -27,6 +27,17 @@ export class GradesComponent implements OnInit {
         this.grades = (newData?.class_members.find(elem => elem.member_id == this.accountService.getAccountData()?.account_id)?.member_grades || []);
       }
     )
+  }
+
+  handleHover(grade: Grade){
+    if(this.selectedGrade == grade){
+      return;
+    }
+    this.setSelectedGrade(grade);
+  }
+
+  setSelectedGrade(grade: Grade) {
+    this.selectedGrade = grade;
   }
 
   @HostListener('mousewheel', ['$event'])

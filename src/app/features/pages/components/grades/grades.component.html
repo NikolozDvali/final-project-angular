@@ -1,8 +1,29 @@
 <div class="wrapper">
-    <div class="grades-container">
-        <ng-container *ngFor="let grade of grades; let last = last">
-            <p>{{ grade.grade }}</p>
-            <span class="stick" *ngIf="!last">|</span>
-          </ng-container>
+    <div>
+        <div class="grades-container">
+            <ng-container *ngIf="grades.length > 0">
+                <ng-container *ngFor="let grade of grades; let last = last">
+                    <p (mouseenter)="handleHover(grade)">{{ grade.grade }}</p>
+                    <span class="stick" *ngIf="!last">|</span>
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="grades.length === 0">
+                <p>You have no grades in this class</p>
+            </ng-container>
+        </div>
+    </div>
+
+    <div>
+        <div class="selected-grade-container">
+            <div *ngIf="selectedGrade !== null && selectedGrade !== undefined">
+                <p>{{selectedGrade.grade}}</p>
+                <p>{{selectedGrade.comment}}</p>
+                <p>{{selectedGrade.date}}</p>
+            </div>
+            <div *ngIf="selectedGrade === null || selectedGrade === undefined">
+                <p>Hover on the grade to see grade info</p>
+            </div>
+        </div>
     </div>
 </div>
