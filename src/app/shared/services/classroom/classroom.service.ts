@@ -4,6 +4,7 @@ import { Class, IClass, chosenClass } from '../../interfaces';
 import { HttpClient } from '@angular/common/http';
 import { ClassFetcherService } from '../fetchClassdata/class-fetcher.service';
 import { Router } from '@angular/router';
+import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,13 @@ export class ClassroomService {
   chosenClass = new BehaviorSubject<chosenClass>(undefined);
 
   constructor(
-    private classFetcher: ClassFetcherService
+    private classFetcher: ClassFetcherService,
+    private pageService: PageControlService
   ) { }
 
   setNewChosenClass(class_id: string) {
+    this.pageService.updatePage("posts");
+
     if(class_id == undefined){
       this.chosenClass.next(undefined);
       return;
