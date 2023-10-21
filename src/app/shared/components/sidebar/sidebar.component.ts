@@ -15,6 +15,7 @@ export class SidebarComponent implements OnInit{
   name: string = '';
   status: string = "Student";
   classes: ClassNames[] = [];
+  selectedClassId: string = '';
 
   constructor(
     private accountService: AccountDataService,
@@ -31,6 +32,15 @@ export class SidebarComponent implements OnInit{
 
     this.name = accountData?.account_name || "";
     this.status = accountData?.account_type || "Student";
+
+   this.classroomService.getChosenClass().subscribe(
+      (data)=>{
+        this.selectedClassId = data?.class_id || '';
+      }
+    )
   }
 
+  setSelectedClass(id: string){
+    this.classroomService.setNewChosenClass(id);
+  }
 }

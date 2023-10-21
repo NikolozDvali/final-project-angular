@@ -8,7 +8,12 @@
     <div class="sidebar-bottom">
 
         <div class="classes">
-            <div *ngFor="let class of classes" class="class">
+            <div 
+                *ngFor="let class of classes"
+                class="class"
+                [ngClass]="{'class-selected': class.class_id === selectedClassId}"
+                (click)="setSelectedClass(class.class_id)"
+            >
                 <p>{{class.class_name}}</p>
             </div>
         </div>

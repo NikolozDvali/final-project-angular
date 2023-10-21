@@ -29,7 +29,7 @@ export class ClassroomService {
   }
 
   getChosenClass(){
-    return this.chosenClass.getValue();
+    return this.chosenClass.asObservable();
   }
 
 }

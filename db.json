@@ -51,6 +51,96 @@
         }
       ],
       "class_posts": []
+    },
+    {
+      "class_name": "Calculus",
+      "class_id": "gdgs",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    },
+    {
+      "class_name": "History",
+      "class_id": "hgfd",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    },
+    {
+      "class_name": "Abstractions",
+      "class_id": "hjj",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    },
+    {
+      "class_name": "Algorithms",
+      "class_id": "jkcx",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    },
+    {
+      "class_name": "Histology",
+      "class_id": "hfhj",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
+    },
+    {
+      "class_name": "Sociology",
+      "class_id": "bvbb",
+      "class_owner": {
+        "owner_name":  "Nikoloz Dvali",
+        "owner_id": "HfDYg2wqAu"
+      },
+      "class_members": [
+        {
+          "member_id": "0AXry4J3jh",
+          "member_name": "Nikoloz_Dvali"
+        }
+      ],
+      "class_posts": []
     }
   ]
 }
