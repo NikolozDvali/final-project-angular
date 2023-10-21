@@ -8,8 +8,8 @@
     <div class="sidebar-bottom">
 
         <div class="classes">
-            <div class="class">
-                <p>Algorithms</p>
+            <div *ngFor="let class of classes" class="class">
+                <p>{{class.class_name}}</p>
             </div>
         </div>
 

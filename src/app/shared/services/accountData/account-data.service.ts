@@ -24,4 +24,8 @@ export class AccountDataService {
     this.loggedInAccount.next(undefined);
     localStorage.removeItem("loggedInAccount");
   }
+
+  getAccountData(){
+    return this.loggedInAccount.getValue();
+  }
 }
