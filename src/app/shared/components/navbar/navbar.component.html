@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="anchors">
-        <a [ngClass]="{ 'selected': selectedPage === 'posts' }">Posts</a>
-        <a [ngClass]="{ 'selected': selectedPage === 'grades' }">Grades</a>
+        <a [ngClass]="{ 'selected': selectedPage === 'posts' }" (click)="setSelectedPage('posts')">Posts</a>
+        <a [ngClass]="{ 'selected': selectedPage === 'grades' }" (click)="setSelectedPage('grades')">Grades</a>
     </div>
 </div>
