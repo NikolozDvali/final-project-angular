@@ -21,6 +21,7 @@ export class LoginComponent {
     private loginService: LoginService,
     private accountService: AccountDataService,
     private router: Router,
+    private classroomService: ClassroomService
   ){}
 
   login(){
@@ -39,7 +40,9 @@ export class LoginComponent {
         }else{
           this.accountService.setLoggedInAccout(response);
           this.showErrorMessage = false;
-          this.router.navigate(['/main'])
+          const cls = response.account_classes[0];
+          this.classroomService.setSelectedClassId(cls.class_id);
+          this.router.navigate(['/main/'+cls.class_name+'/posts'])
         }
       }
     );

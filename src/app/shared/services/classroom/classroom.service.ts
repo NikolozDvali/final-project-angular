@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { ClassFetcherService } from '../fetchClassdata/class-fetcher.service';
 import { Router } from '@angular/router';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
+import { AccountDataService } from '../accountData/account-data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,13 @@ export class ClassroomService {
   selectedClassId = new BehaviorSubject<string | undefined>(undefined);
 
   constructor(
-    private classFetcher: ClassFetcherService
+    private classFetcher: ClassFetcherService,
+    private accountService: AccountDataService
   ){
     const selectedClassIdInStorage = localStorage.getItem("selectedClassId");
     if(selectedClassIdInStorage){
       this.setSelectedClassId(selectedClassIdInStorage);
-    }else{}
+    }
 
     this.selectedClassId.subscribe(
       (newId)=>{
