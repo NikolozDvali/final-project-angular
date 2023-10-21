@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
-import { IClass } from 'src/app/shared/interfaces';
+import { IClass, IPost } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-posts',
@@ -12,6 +12,7 @@ import { IClass } from 'src/app/shared/interfaces';
 })
 export class PostsComponent implements OnInit {
   classroomData: IClass | undefined;
+  posts: IPost[] = [];
   
   constructor(
     private classroomService: ClassroomService
@@ -21,6 +22,7 @@ export class PostsComponent implements OnInit {
     this.classroomService.selectedClassData.subscribe(
       (classdata)=>{
         this.classroomData = classdata;
+        this.posts = classdata?.class_posts.reverse() || [];
       }
     )
   }

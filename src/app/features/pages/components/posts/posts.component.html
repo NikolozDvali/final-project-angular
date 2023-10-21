@@ -10,7 +10,18 @@
 
    <div class="feed-wrapper">
         <div class="feed">
-
+            <div class="post" *ngFor="let post of classroomData?.class_posts">
+                <div class="icon-container">
+                    <div>
+                        <img src="../../../../../assets/images/teacher-post-icon.png">
+                    </div>
+                </div>
+                <div class="post-texts">
+                    <p>{{post.post_title}}</p>
+                    <p>{{post.post_text}}</p>
+                    <p>{{post.post_date}}</p>
+                </div>
+            </div>
         </div>
    </div>
 </div>
