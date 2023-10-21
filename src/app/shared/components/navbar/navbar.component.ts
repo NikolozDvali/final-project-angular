@@ -21,7 +21,6 @@ export class NavbarComponent implements OnInit{
   ngOnInit() {
     this.pageService.getPage().subscribe(
       (page)=>{
-        console.log(page)
         this.selectedPage = page
       }
     )
