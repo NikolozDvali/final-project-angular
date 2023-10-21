@@ -4,6 +4,7 @@ import { AccountDataService } from '../../services/accountData/account-data.serv
 import { ClassNames } from '../../interfaces';
 import { ClassroomService } from '../../services/classroom/classroom.service';
 import { Router } from '@angular/router';
+import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -21,7 +22,8 @@ export class SidebarComponent implements OnInit{
   constructor(
     private accountService: AccountDataService,
     private classroomService: ClassroomService,
-    private router: Router
+    private router: Router,
+    private pageControl: PageControlService
   ) {}
 
   ngOnInit() {
@@ -41,6 +43,14 @@ export class SidebarComponent implements OnInit{
 
   setSelectedClass(id: string){
     this.classroomService.setSelectedClassId(id)
+    this.pageControl.updatePage("posts");
+    if(id!==''){
+      this.router.navigate(['main', this.getClassName(id), 'posts']);
+    }
+  }
+
+  private getClassName(id: string){
+    return this.classes.find(elem=>elem.class_id == id)?.class_name;
   }
 
   logout(){
