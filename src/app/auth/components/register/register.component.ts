@@ -22,9 +22,26 @@ export class RegisterComponent {
   ) {}
 
   register(){
-    const account = this.registerForm.value;
+    const {repeatPassword, ...accountTempte} = this.registerForm.value;
+
+    const account: Account = {
+      account_email: accountTempte.email,
+      account_name: accountTempte.username,
+      account_password: accountTempte.password,
+      account_type: accountTempte.status,
+      account_classes: []
+    }
+
     this.registerForm.reset();
-    this.registerService.register(account);
+    this.registerService.register(account).subscribe(
+      (registered)=>{
+        if(registered){
+          console.log("REGISTER SUCCESSFUL");
+        }else{
+          console.log("USER WITH THIS EMAIL AND PASSWORD ALREADY EXISTS");
+        }
+      }
+    );
   }
 
   registerForm = this.formBuilder.group({
