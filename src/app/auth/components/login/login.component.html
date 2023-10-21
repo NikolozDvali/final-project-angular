@@ -14,9 +14,11 @@
             </div>
 
             <small *ngIf="showErrorMessage">Email or Password is Incorrect</small>
+
             <button type="submit" [disabled]="!loginForm.valid">
                 Login
             </button>
+            
             <a [routerLink]="['/auth/register']">Not a user? Register Now</a>
         </form>
     </section>
