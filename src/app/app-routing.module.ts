@@ -39,6 +39,11 @@ const routes: Routes = [
         path: ':subjectname',
         children: [
           {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'posts'
+          },
+          {
             path: 'posts',
             loadComponent:
               ()=>import('./features/pages/components/posts/posts.component')
