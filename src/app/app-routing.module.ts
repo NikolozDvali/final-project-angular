@@ -41,13 +41,13 @@ const routes: Routes = [
           {
             path: 'posts',
             loadComponent:
-              ()=>import('./features/posts/posts.component')
+              ()=>import('./features/pages/components/posts/posts.component')
               .then(m=>m.PostsComponent)
           },
           {
             path: 'grades',
             loadComponent: 
-              ()=>import('./features/grades/grades.component')
+              ()=>import('./features/pages/components/grades/grades.component')
               .then(m=>m.GradesComponent)
           }
         ]
