@@ -44,6 +44,8 @@ export class SidebarComponent implements OnInit{
 
   setSelectedClass(id: string){
     this.classroomService.setNewChosenClass(id);
+    const classname = this.classes.find(elem=>elem.class_id==id)?.class_name;
+    this.router.navigate(['main', classname, 'posts'])
   }
 
   logout(){

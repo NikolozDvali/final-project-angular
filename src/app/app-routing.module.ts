@@ -36,21 +36,21 @@ const routes: Routes = [
       .then((m) => m.MainPageComponent),
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'posts',
-      }, 
-      {
-        path: 'posts',
-        loadComponent:
-          ()=>import('./features/posts/posts.component')
-          .then(m=>m.PostsComponent)
-      },
-      {
-        path: 'grades',
-        loadComponent: 
-          ()=>import('./features/grades/grades.component')
-          .then(m=>m.GradesComponent)
+        path: ':subjectname',
+        children: [
+          {
+            path: 'posts',
+            loadComponent:
+              ()=>import('./features/posts/posts.component')
+              .then(m=>m.PostsComponent)
+          },
+          {
+            path: 'grades',
+            loadComponent: 
+              ()=>import('./features/grades/grades.component')
+              .then(m=>m.GradesComponent)
+          }
+        ]
       }
     ]
   }

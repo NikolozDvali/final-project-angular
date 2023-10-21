@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Class, IClass, chosenClass } from '../../interfaces';
 import { HttpClient } from '@angular/common/http';
 import { ClassFetcherService } from '../fetchClassdata/class-fetcher.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
