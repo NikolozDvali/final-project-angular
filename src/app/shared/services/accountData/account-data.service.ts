@@ -8,14 +8,20 @@ import { BehaviorSubject } from 'rxjs';
 export class AccountDataService {
   loggedInAccount = new BehaviorSubject<loggedInAccount>(undefined);
 
-  constructor() { }
+  constructor() {
+    const storedData = localStorage.getItem("loggedInAccount");
+    if(storedData){
+      this.loggedInAccount.next(JSON.parse(storedData));
+    }
+  }
 
   setLoggedInAccout(iaccount: IAccount){
     this.loggedInAccount.next(iaccount);
-    console.log("LOGGED IN ACCOUNT IS", this.loggedInAccount.value)
+    localStorage.setItem("loggedInAccount", JSON.stringify(iaccount));
   }
 
   logout(){
     this.loggedInAccount.next(undefined);
+    localStorage.removeItem("loggedInAccount");
   }
 }
