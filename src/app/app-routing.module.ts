@@ -31,9 +31,14 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    loadComponent:
-      ()=>import('./core/components/main-page/main-page.component')
-      .then(m=>m.MainPageComponent),
+    children: [
+      {
+        path: '',
+        loadComponent:
+          ()=>import('./core/components/main-page/main-page.component')
+          .then(m=>m.MainPageComponent),
+      }
+    ]
   }
 ];
 
