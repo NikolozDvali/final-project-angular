@@ -23,7 +23,6 @@ export class RegisterService {
     return this.http.get<IAccount[]>(this.accountsUrl, { params: { account_email: iaccount.account_email, account_password: iaccount.account_password } })
       .pipe(
         switchMap((existingAccounts) => {
-          console.log(existingAccounts);
           if (existingAccounts.length === 0) {
             return this.postRequest(iaccount).pipe(
               map(() => true) 

@@ -14,6 +14,7 @@ import { RegisterService } from '../../services/register/register.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  showAccountExistsError = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -36,9 +37,9 @@ export class RegisterComponent {
     this.registerService.register(account).subscribe(
       (registered)=>{
         if(registered){
-          console.log("REGISTER SUCCESSFUL");
+          this.showAccountExistsError = false;
         }else{
-          console.log("USER WITH THIS EMAIL AND PASSWORD ALREADY EXISTS");
+          this.showAccountExistsError = true;
         }
       }
     );

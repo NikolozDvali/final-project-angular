@@ -37,6 +37,8 @@
                 </div>
             </div>
 
+            <small *ngIf="this.showAccountExistsError">Account With This Email And Password Already exists</small>
+
             <button type="submit" [disabled]="!this.registerForm.valid">
                 Register
             </button>

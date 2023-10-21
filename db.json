@@ -17,6 +17,15 @@
       "account_classes": [],
       "account_id": "0AXry4J3jh",
       "id": 2
+    },
+    {
+      "account_email": "ndval21@freeuni.edu.ge",
+      "account_name": "Nikoloz Dvali",
+      "account_password": "paroli22",
+      "account_type": "student",
+      "account_classes": [],
+      "account_id": "gKsbaNmqJX",
+      "id": 3
     }
   ],
   "classes": []
