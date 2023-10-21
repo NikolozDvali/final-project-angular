@@ -1,0 +1,39 @@
+.wrapper{
+    width: 100%;
+    height: calc(100% - 70px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: bisque;
+
+    .grades-container{
+        cursor: default;
+        width: 100%;
+        max-width: 700px;
+        height: 80px;
+        border-radius: 20px;
+        background-color: white;
+
+        padding: 20px 30px;
+
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+
+        overflow-x: auto;
+        white-space: nowrap;
+
+        transition: 0.3s; 
+
+        &:hover {
+            overflow-x: scroll; 
+        }
+
+        .stick {
+            margin: 0 10px;
+        }
+    }
+}

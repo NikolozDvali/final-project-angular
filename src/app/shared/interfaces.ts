@@ -18,7 +18,7 @@ export interface IAccount extends Account{
 export interface Class{
     class_name: string,
     class_owner: Owner;
-    class_mambers: Member[],
+    class_members: Member[],
     class_posts: IPost[],
 }
 
@@ -34,6 +34,13 @@ export interface Owner{
 export interface Member{
     member_id: string,
     member_name: string,
+    member_grades: Grade[],
+}
+
+export interface Grade{
+    grade: number,
+    date: string,
+    comment: string,
 }
 
 export interface Post{

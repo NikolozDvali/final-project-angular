@@ -136,8 +136,15 @@
       },
       "class_members": [
         {
-          "member_id": "0AXry4J3jh",
-          "member_name": "Nikoloz_Dvali"
+          "member_id": "HfDYg2wqAu",
+          "member_name": "Nikoloz_Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "date": "Sunday, 22 October, 2023",
+              "comment": "Behaved well"
+            }
+          ]
         }
       ],
       "class_posts": [

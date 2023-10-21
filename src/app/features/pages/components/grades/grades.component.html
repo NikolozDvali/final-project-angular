@@ -1,1 +1,8 @@
-<p>grades works!</p>
+<div class="wrapper">
+    <div class="grades-container">
+        <ng-container *ngFor="let grade of grades; let last = last">
+            <p>{{ grade.grade }}</p>
+            <span class="stick" *ngIf="!last">|</span>
+          </ng-container>
+    </div>
+</div>

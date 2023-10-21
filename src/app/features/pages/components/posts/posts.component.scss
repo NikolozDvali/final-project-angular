@@ -2,6 +2,7 @@
     width: 100%;
 
     max-height: calc(100vh - 70px);
+    background-color: bisque;
 
     display: grid;
     grid-template-rows: auto auto;
@@ -74,6 +75,8 @@
     grid-template-columns: 70px 1fr;
     min-height: 70px;
     position: relative;
+    
+    background-color: white;
     
     border: 3px solid #8D83C2;
     border-radius: 15px;
