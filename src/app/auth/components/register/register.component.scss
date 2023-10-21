@@ -1,0 +1,147 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(51, 132, 181);
+    font-family: 'Roboto', sans-serif;
+
+  }
+  
+  .form-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+  
+    form {
+        display: flex;
+        flex-direction: column;
+
+        small {
+            color: red;
+        }
+
+
+        h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  
+      div {
+        margin: 10px 0;
+        
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+  
+          &::placeholder {
+            color: #999;
+          }
+
+          &:focus{
+            outline: 2px solid #007bff;
+          }
+        }
+      }
+  
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+        &:disabled {
+          background-color: #ccc; // Change the color for disabled state
+          cursor: not-allowed; // Change the cursor style
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: small;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .radios > div{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .radio{
+    display: block;
+    cursor: pointer; 
+    user-select:none;
+    text-align: left;
+    input{
+      display: none;
+      &+span{
+        display: inline-block; 
+        position: relative;
+        padding-left: 30px;
+        &:before{
+          content: '';
+          display: block; 
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          border-radius: 50%;
+          margin-right: 5px;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #ccc;
+          background: #fff;
+        }
+        &:after{
+          content: '';
+          display: block; 
+          width: 10px;
+          height: 10px;
+          background: #222;
+          position: absolute;
+          border-radius: 50%;
+          top: 3px;
+          left: 3px;
+          opacity: 0;
+          transform: scale(0,0); 
+          transition: all .2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+        }
+      }
+      &:checked+span:after{
+        opacity: 1;
+        transform: scale(1,1);
+      }
+    }
+  }

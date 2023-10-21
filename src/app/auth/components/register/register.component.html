@@ -1,1 +1,47 @@
-<p>register works!</p>
+<section class="wrapper">
+    <section class="form-container">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <h2>Register</h2>
+
+            <div>
+                <label for="username">Username</label>
+                <input formControlName="username" id="username" type="text" autocomplete="username" placeholder="Username...">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input formControlName="email" id="email" type="email" autocomplete="email" placeholder="Email...">
+            </div>
+            
+            <div>
+                <label for="password">Password</label>
+                <input formControlName="password" id="password" type="password" autocomplete="new-password" placeholder="Password...">
+            </div>
+
+            <div>
+                <label for="repeatPassword">Repeat Password</label>
+                <input formControlName="repeatPassword" id="repeatPassword" type="password" autocomplete="new-password" placeholder="Password...">
+            </div>
+
+            <div class="radios">
+                <strong>Register as:</strong>
+                <div>
+                    <label class="radio">
+                        <input name="status" type="radio" checked formControlName="status" [value]="'student'">
+                        <span>Student</span>
+                      </label>
+                    <label class="radio">
+                        <input name="status" type="radio" formControlName="status" [value]="'teacher'">
+                        <span>Teacher</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!this.registerForm.valid">
+                Register
+            </button>
+
+            <a [routerLink]="['/auth/login']">Already Registered? Log in instead</a>
+        </form>
+    </section>
+</section>
