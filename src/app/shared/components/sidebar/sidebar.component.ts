@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit{
-  name: string = '';
-  status: string = "Student";
   classes: ClassNames[] = [];
-  selectedClassId: string = '';
+  name: string = '';
+  status: string = 'Student';
+  selectedClassId = '';
 
   constructor(
     private accountService: AccountDataService,
@@ -24,28 +24,23 @@ export class SidebarComponent implements OnInit{
     private router: Router
   ) {}
 
-  ngOnInit(){
-    const accountData = this.accountService.getAccountData();
-
-    this.classes = accountData?.account_classes || [];
-    if(this.classes.length > 0){
-      this.classroomService.setNewChosenClass(this.classes[0].class_id);
-    }
-
-    this.name = accountData?.account_name || "";
-    this.status = accountData?.account_type || "Student";
-
-   this.classroomService.getChosenClass().subscribe(
-      (data)=>{
-        this.selectedClassId = data?.class_id || '';
+  ngOnInit() {
+    this.accountService.loggedInAccount.subscribe(
+      (newAcc)=>{
+        this.classes = newAcc?.account_classes || [];
+        this.name = newAcc?.account_name || '';
+        this.status = newAcc?.account_type || "Student";
+      }
+    )
+    this.classroomService.selectedClassId.subscribe(
+      (newId)=>{
+        this.selectedClassId = newId || '';
       }
     )
   }
 
   setSelectedClass(id: string){
-    this.classroomService.setNewChosenClass(id);
-    const classname = this.classes.find(elem=>elem.class_id==id)?.class_name;
-    this.router.navigate(['main', classname, 'posts'])
+    this.classroomService.setSelectedClassId(id)
   }
 
   logout(){

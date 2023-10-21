@@ -10,38 +10,48 @@ import { PageControlService } from 'src/app/features/pages/services/pageControl/
   providedIn: 'root'
 })
 export class ClassroomService {
-  chosenClass = new BehaviorSubject<chosenClass>(undefined);
+  selectedClassData = new BehaviorSubject<chosenClass>(undefined);
+  selectedClassId = new BehaviorSubject<string | undefined>(undefined);
 
   constructor(
-    private classFetcher: ClassFetcherService,
-    private pageService: PageControlService
-  ) { }
+    private classFetcher: ClassFetcherService
+  ){
+    const selectedClassIdInStorage = localStorage.getItem("selectedClassId");
+    if(selectedClassIdInStorage){
+      this.setSelectedClassId(selectedClassIdInStorage);
+    }else{}
 
-  setNewChosenClass(class_id: string) {
-    this.pageService.updatePage("posts");
-
-    if(class_id == undefined){
-      this.chosenClass.next(undefined);
-      return;
-    }
-
-    const storedData = localStorage.getItem("class/"+class_id);
-    if(storedData){
-      this.chosenClass.next(JSON.parse(storedData));
-      return;
-    }
-
-    
-    this.classFetcher.getClassData(class_id).subscribe(
-      (classData)=>{
-        localStorage.setItem("class/"+class_id, JSON.stringify(classData));
-        this.chosenClass.next(classData);
+    this.selectedClassId.subscribe(
+      (newId)=>{
+        this.getClassData(newId || '');
       }
     )
   }
 
-  getChosenClass(){
-    return this.chosenClass.asObservable();
+  setSelectedClassId(id: string){
+    localStorage.setItem("selectedClassId", id);
+    this.selectedClassId.next(id);
   }
 
+
+  getClassData(id: string){
+    if(id=='') return;
+
+    const data = localStorage.getItem('class/'+id);
+    if(data){
+      this.setSelectedClassData(JSON.parse(data));
+    }
+
+    this.classFetcher.getClassData(id).subscribe(
+      (data)=>{
+       this.setSelectedClassData(data);
+      }
+    )
+  }
+
+  
+  setSelectedClassData(iclass: IClass){
+    localStorage.setItem("class/"+iclass.class_id, JSON.stringify(iclass));
+    this.selectedClassData.next(iclass);
+  }
 }
