@@ -15,6 +15,12 @@ export class ClassroomService {
   ) { }
 
   setNewChosenClass(class_id: string) {
+    if(class_id == undefined){
+      this.chosenClass.next(undefined);
+      return;
+    }
+
+    
     this.classFetcher.getClassData(class_id).subscribe(
       (classData)=>{
         this.chosenClass.next(classData);

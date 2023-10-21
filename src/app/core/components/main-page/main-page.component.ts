@@ -10,5 +10,4 @@ import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.comp
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-
 }

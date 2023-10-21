@@ -12,6 +12,8 @@ import { ClassroomService } from '../../services/classroom/classroom.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit{
+  name: string = '';
+  status: string = "Student";
   classes: ClassNames[] = [];
 
   constructor(
@@ -20,10 +22,15 @@ export class SidebarComponent implements OnInit{
   ) {}
 
   ngOnInit(){
-    this.classes = this.accountService.getAccountData()?.account_classes || [];
+    const accountData = this.accountService.getAccountData();
+
+    this.classes = accountData?.account_classes || [];
     if(this.classes.length > 0){
       this.classroomService.setNewChosenClass(this.classes[0].class_id);
     }
+
+    this.name = accountData?.account_name || "";
+    this.status = accountData?.account_type || "Student";
   }
 
 }
