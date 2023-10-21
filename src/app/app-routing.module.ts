@@ -31,12 +31,26 @@ const routes: Routes = [
   },
   {
     path: 'main',
+    loadComponent: () =>
+      import('./core/components/main-page/main-page.component')
+      .then((m) => m.MainPageComponent),
     children: [
       {
         path: '',
+        pathMatch: 'full',
+        redirectTo: 'posts',
+      }, 
+      {
+        path: 'posts',
         loadComponent:
-          ()=>import('./core/components/main-page/main-page.component')
-          .then(m=>m.MainPageComponent),
+          ()=>import('./features/posts/posts.component')
+          .then(m=>m.PostsComponent)
+      },
+      {
+        path: 'grades',
+        loadComponent: 
+          ()=>import('./features/grades/grades.component')
+          .then(m=>m.GradesComponent)
       }
     ]
   }
