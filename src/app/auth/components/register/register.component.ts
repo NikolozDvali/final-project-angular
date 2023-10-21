@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CustomValidatorsService } from '../../services/custom-validators/custom-validators.service';
+import { Account } from 'src/app/shared/interfaces';
+import { RegisterService } from '../../services/register/register.service';
 
 @Component({
   selector: 'app-register',
@@ -15,11 +17,14 @@ export class RegisterComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private customValidators: CustomValidatorsService
+    private customValidators: CustomValidatorsService,
+    private registerService: RegisterService
   ) {}
 
   register(){
-
+    const account = this.registerForm.value;
+    this.registerForm.reset();
+    this.registerService.register(account);
   }
 
   registerForm = this.formBuilder.group({

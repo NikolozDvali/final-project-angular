@@ -1,4 +1,15 @@
 {
-  "accounts": [],
+  "accounts": [
+    {
+      "email": "ndval21@freeuni.edu.ge",
+      "password": "paroli00",
+      "repeatPassword": "paroli00",
+      "username": "Nikoloz Dvali",
+      "status": "student",
+      "account_id": "HfDYg2wqAu",
+      "account_classes": [],
+      "id": 1
+    }
+  ],
   "classes": []
 }
