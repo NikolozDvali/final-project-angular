@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -7,7 +8,18 @@ import { BehaviorSubject } from 'rxjs';
 export class PageControlService {
   page = new BehaviorSubject<string>("posts");
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const urlParts = event.url.split('/');
+        const lastPart = urlParts[urlParts.length - 1];
+        this.updatePage(lastPart);
+      }
+    });
+
+
     const storedVal = localStorage.getItem("page");
     if(storedVal){
       this.updatePage(storedVal);

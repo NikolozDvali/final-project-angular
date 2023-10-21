@@ -20,7 +20,10 @@ export class NavbarComponent implements OnInit{
 
   ngOnInit() {
     this.pageService.getPage().subscribe(
-      (page)=>this.selectedPage = page,
+      (page)=>{
+        console.log(page)
+        this.selectedPage = page
+      }
     )
   }
 
