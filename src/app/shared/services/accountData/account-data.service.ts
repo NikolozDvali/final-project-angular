@@ -22,7 +22,7 @@ export class AccountDataService {
 
   logout(){
     this.loggedInAccount.next(undefined);
-    localStorage.removeItem("loggedInAccount");
+    localStorage.clear()
   }
 
   getAccountData(){

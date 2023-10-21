@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AccountDataService } from '../../services/accountData/account-data.service';
 import { ClassNames } from '../../interfaces';
 import { ClassroomService } from '../../services/classroom/classroom.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -19,7 +20,8 @@ export class SidebarComponent implements OnInit{
 
   constructor(
     private accountService: AccountDataService,
-    private classroomService: ClassroomService
+    private classroomService: ClassroomService,
+    private router: Router
   ) {}
 
   ngOnInit(){
@@ -42,5 +44,10 @@ export class SidebarComponent implements OnInit{
 
   setSelectedClass(id: string){
     this.classroomService.setNewChosenClass(id);
+  }
+
+  logout(){
+    this.accountService.logout();
+    this.router.navigate(['/auth/login']);
   }
 }
