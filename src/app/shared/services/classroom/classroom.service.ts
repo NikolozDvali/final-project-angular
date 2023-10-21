@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Class, IClass, chosenClass } from '../../interfaces';
 import { HttpClient } from '@angular/common/http';
 import { ClassFetcherService } from '../fetchClassdata/class-fetcher.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 import { AccountDataService } from '../accountData/account-data.service';
 
@@ -16,8 +16,21 @@ export class ClassroomService {
 
   constructor(
     private classFetcher: ClassFetcherService,
-    private accountService: AccountDataService
+    private accountService: AccountDataService,
+    private router: Router
   ){
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const urlParts = event.url.split('/');
+        const classname = urlParts[urlParts.length - 2];
+        const classid = this.accountService.loggedInAccount.value?.account_classes.find(elem=>elem.class_name==classname)?.class_id;
+
+        this.setSelectedClassId(classid || '');
+        }
+      }
+    )
+
     const selectedClassIdInStorage = localStorage.getItem("selectedClassId");
     if(selectedClassIdInStorage){
       this.setSelectedClassId(selectedClassIdInStorage);
