@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
 import { IClass, IPost } from 'src/app/shared/interfaces';
-import { NewPostFormComponent } from '../new-post-form/new-post-form.component';
+import { NewPostFormComponent } from '../../../new-post-form/components/new-post-form/new-post-form.component';
 
 @Component({
   selector: 'app-posts',
