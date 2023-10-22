@@ -54,6 +54,12 @@ const routes: Routes = [
             loadComponent: 
               ()=>import('./features/pages/components/grades/grades.component')
               .then(m=>m.GradesComponent)
+          },
+          {
+            path: 'students',
+            loadComponent:
+              ()=>import('./features/pages/components/students/students.component')
+              .then(m=>m.StudentsComponent)
           }
         ]
       }
