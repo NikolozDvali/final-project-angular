@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
-import { Member, Owner } from 'src/app/shared/interfaces';
+import { Grade, Member, Owner } from 'src/app/shared/interfaces';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class StudentsComponent implements OnInit{
   class_owner: Owner | undefined;
   class_members: Member[] = [];
   accountStatus = "Student";
+  selectedGrade: Grade | undefined;
 
   constructor(
     private classroomService: ClassroomService,
@@ -33,6 +34,10 @@ export class StudentsComponent implements OnInit{
         this.accountStatus = acc?.account_type || 'Status';
       }
     )
+  }
+
+  setSelectedGrade(grade: Grade){
+    this.selectedGrade = grade;
   }
 
   isOwner(member: Member){

@@ -5,12 +5,12 @@
     max-height: calc(100% - 70px);
     overflow-y: auto;
 
-    >div{
+    >div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-    
+
         padding-top: 50px;
         padding-bottom: 30px;
         overflow-y: auto;
@@ -41,8 +41,8 @@ tbody tr {
     table-layout: fixed;
 }
 
-thead{
-    width: calc( 100% - 1em );
+thead {
+    width: calc(100% - 1em);
     background-color: #8D83C2;
 }
 
@@ -60,36 +60,49 @@ td {
     padding: 8px;
     text-align: center;
     border: 1px solid rgb(126, 126, 126);
+
+    p {
+        display: inline;
+        cursor: default;
+    }
 }
 
-.grade-data-wrapper{
+.grade-data-wrapper {
     width: 100%;
     max-width: 300px;
-    height: auto;
-    padding: 20px 0;
+    height: 100px;
+    max-height: 110px;
+    overflow-y: auto;
     background-color: beige;
     border-radius: 20px;
-
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    p{
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
         font-family: "Lato";
 
-        &:first-of-type{
+        &:first-of-type {
             font-size: 20px;
             font-weight: bolder;
             color: #8D83C2;
         }
 
-        &:nth-of-type(2){
+        &:nth-of-type(2) {
             margin-bottom: 5px;
         }
 
-        &:nth-of-type(3){
+        &:nth-of-type(3) {
             font-size: 13px;
             font-weight: bold;
             color: #8D83C2;

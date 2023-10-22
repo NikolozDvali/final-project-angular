@@ -1,9 +1,13 @@
 <div class="wrapper">
   <div>
-    <div class="grade-data-wrapper">
-      <p>10</p>
-      <p>Acted Nicely</p>
-      <p>Sunday, 22 October, 2022</p>
+    <div class="grade-data-wrapper" *ngIf="accountStatus =='Teacher'">
+      <div *ngIf="selectedGrade != undefined">
+        <p>{{selectedGrade.grade}}</p>
+        <p>{{selectedGrade.comment}}</p>
+        <p>{{selectedGrade.date}}</p>    
+      </div>
+      <p *ngIf="selectedGrade === undefined">Hover on grade to see grade info</p>
+    
     </div>
   
     <table>
@@ -17,13 +21,12 @@
       <tbody>
         <tr *ngFor="let member of class_members">
           <ng-container *ngIf="!isOwner(member)">
-            <td>{{ member.member_id }}</td>
-            <td>{{ member.member_name }}</td>
+            <td><p>{{ member.member_id }}</p></td>
+            <td><p>{{ member.member_name }}</p></td>
             <td *ngIf="accountStatus == 'Teacher'">
               <p>
                 <ng-container *ngFor="let gradeObj of member.member_grades; let last = last">
-                  {{ gradeObj.grade }}
-                  <span *ngIf="!last"> | </span>
+                  <p (mouseenter)="setSelectedGrade(gradeObj)">{{ gradeObj.grade }} <span *ngIf="!last"> | </span> </p> 
                 </ng-container>
               </p>
             </td>
