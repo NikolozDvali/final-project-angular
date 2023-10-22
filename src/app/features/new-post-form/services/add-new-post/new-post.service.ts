@@ -38,10 +38,14 @@ export class NewPostService {
     }
 
     const ipost: IPost = {...post, post_id: randomId};
-    const fullPosts = [...this.currentPosts, ipost];
+    const fullPosts = [ipost, ...this.currentPosts];
 
     const url = this.generateUrl();
-    this.sendPatchRequest(fullPosts, url).subscribe();
+    this.sendPatchRequest(fullPosts, url).subscribe(
+      (resp)=>{
+        this.classroomService.refetchClass(this.classId);
+      }
+    );
   }
 
   private generateUrl(){

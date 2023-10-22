@@ -304,46 +304,28 @@
       ],
       "class_posts": [
         {
-          "post_title": "Hello",
-          "post_text": "Test\n",
+          "post_title": "4",
+          "post_text": "4",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "UkPrdSxuva"
+          "post_id": "9twimxe4px"
         },
         {
-          "post_title": "Assignment6",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment5",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment4",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment3",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment2",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment1",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Test also",
-          "post_text": "gfdgdfg",
+          "post_title": "3",
+          "post_text": "3",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "K5I1ed3Qj3"
+          "post_id": "Tt5r0QP4t7"
+        },
+        {
+          "post_title": "2",
+          "post_text": "2",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "b9UCcoUfjW"
+        },
+        {
+          "post_title": "1",
+          "post_text": "1",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "oSf3YGHBco"
         }
       ],
       "id": "bvbb"

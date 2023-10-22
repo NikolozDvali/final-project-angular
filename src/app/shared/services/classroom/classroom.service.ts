@@ -66,6 +66,10 @@ export class ClassroomService {
     )
   }
 
+  refetchClass(id: string){
+    localStorage.removeItem('class/'+id);
+    this.getClassData(id);
+  }
   
   setSelectedClassData(iclass: IClass){
     localStorage.setItem("class/"+iclass.id, JSON.stringify(iclass));
