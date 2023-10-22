@@ -1,1 +1,18 @@
-<p>students works!</p>
+<div class="wrapper">
+    <table>
+        <thead>
+          <tr>
+            <th>Member ID</th>
+            <th>Member Name</th>
+          </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let member of class_members">
+                    <ng-container *ngIf="!isOwner(member)">
+                      <td>{{ member.member_id }}</td>
+                      <td>{{ member.member_name }}</td>
+                    </ng-container>
+                  </tr>
+        </tbody>
+      </table>
+</div>

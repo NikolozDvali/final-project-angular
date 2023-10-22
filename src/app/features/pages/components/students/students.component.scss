@@ -1,0 +1,53 @@
+/* Your SCSS */
+.wrapper {
+    background-color: bisque;
+    height: calc(100% - 70px);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    font-family: "Knewave", cursive;
+    border: 2px solid white;
+
+    max-height: 500px;
+
+}
+
+tbody {
+    display: block;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead{
+    width: calc( 100% - 1em );
+    background-color: #8D83C2;
+}
+
+th {
+    color: white;
+    font-weight: 100;
+}
+
+td {
+    background-color: white;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgb(126, 126, 126);
+}

@@ -65,7 +65,55 @@
       "class_members": [
         {
           "member_id": "0AXry4J3jh",
-          "member_name": "Nikoloz_Dvali"
+          "member_name": "Nikoloz Dvali"
+        },
+        {
+          "member_id": "0AXry4q3jh",
+          "member_name": "Sandro Kavlashvili"
+        },
+        {
+          "member_id": "0AXpy4J3jh",
+          "member_name": "Mariam Jafaridze"
+        },
+        {
+          "member_id": "0AXry4J3jn",
+          "member_name": "Giorgi Chalagashvili"
+        },
+        {
+          "member_id": "0Axry4J3jh",
+          "member_name": "Levan Nakaidze"
+        },
+        {
+          "member_id": "0AXry4Jbjh",
+          "member_name": "Sandro Axmeteli"
+        },
+        {
+          "member_id": "0AX3y4J3jh",
+          "member_name": "Karlo Sakandelidze"
+        },
+        {
+          "member_id": "0AXry443jh",
+          "member_name": "Eduard Shevardnadze"
+        },
+        {
+          "member_id": "fdfdfsdfsf",
+          "member_name": "Nini Kopaliani"
+        },
+        {
+          "member_id": "fdsff34444",
+          "member_name": "Tetri Rashi"
+        },
+        {
+          "member_id": "34fdvcvbbv",
+          "member_name": "Iakob Gogebashvili"
+        },
+        {
+          "member_id": "gfdfgfgdgd",
+          "member_name": "Akaki Wereteli"
+        },
+        {
+          "member_id": "hfjhjgjcxv",
+          "member_name": "Kolau Nadiradze"
         }
       ],
       "class_posts": [
@@ -90,7 +138,14 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": [],
+      "class_posts": [
+        {
+          "post_title": "Hello",
+          "post_text": "THIS IS TEST POST",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "o0dzVkf2UA"
+        }
+      ],
       "id": "gdgs"
     },
     {
