@@ -4,6 +4,7 @@
     <app-new-grade-form 
       *ngIf="accountStatus == 'Teacher'"
       [selectedStudentId]="selectedStudentId"
+      (selectedStudentChangeEvent)="setSelectedId($event)"
     ></app-new-grade-form>
 
     <div class="grade-data-wrapper" *ngIf="accountStatus =='Teacher'">

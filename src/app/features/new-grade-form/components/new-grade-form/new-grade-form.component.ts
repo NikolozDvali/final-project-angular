@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Grade } from 'src/app/shared/interfaces';
@@ -15,6 +15,7 @@ import { map } from 'rxjs';
 })
 export class NewGradeFormComponent implements OnChanges{
   @Input() selectedStudentId: string | undefined;
+  @Output() selectedStudentChangeEvent = new EventEmitter<string | undefined>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -47,8 +48,8 @@ export class NewGradeFormComponent implements OnChanges{
     }
 
    this.newGradeService.addNewGrade(this.selectedStudentId || '', grade).subscribe(
-    (resp)=>{
-      console.log(resp)
+    ()=>{
+      this.selectedStudentChangeEvent.emit(undefined);
     }
    );
   }

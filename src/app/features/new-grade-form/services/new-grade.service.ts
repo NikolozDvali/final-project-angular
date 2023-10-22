@@ -35,7 +35,11 @@ export class NewGradeService {
 
     const classId = this.classroomService.selectedClassId.value;
     const url = `${this.baseUrl}/classes/${classId}`;
-    this.http.patch(url, { class_members: currentMembers }).subscribe();
+    this.http.patch(url, { class_members: currentMembers }).subscribe(
+      ()=>{
+        this.classroomService.refetchClass(classId as string)
+      }
+    );
   }
 
   private checkStudent(studentId: string): Observable<string> {

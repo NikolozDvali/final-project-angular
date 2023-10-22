@@ -86,6 +86,11 @@
               "grade": 10,
               "comment": "",
               "date": "Monday, October 23, 2023"
+            },
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
             }
           ]
         },
@@ -100,6 +105,11 @@
             },
             {
               "grade": 2,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            },
+            {
+              "grade": 10,
               "comment": "",
               "date": "Monday, October 23, 2023"
             }
@@ -188,48 +198,80 @@
               "grade": 3,
               "date": "Sunday, 22 October, 2023",
               "comment": "Acted nicely"
+            },
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
             }
           ]
         },
         {
           "member_id": "0AXry4J3jn",
-          "member_name": "Giorgi Chalagashvili"
+          "member_name": "Giorgi Chalagashvili",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            }
+          ]
         },
         {
           "member_id": "0Axry4J3jh",
-          "member_name": "Levan Nakaidze"
+          "member_name": "Levan Nakaidze",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            },
+            {
+              "grade": 3,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            }
+          ]
         },
         {
           "member_id": "0AXry4Jbjh",
-          "member_name": "Sandro Axmeteli"
+          "member_name": "Sandro Axmeteli",
+          "member_grades": []
         },
         {
           "member_id": "0AX3y4J3jh",
-          "member_name": "Karlo Sakandelidze"
+          "member_name": "Karlo Sakandelidze",
+          "member_grades": []
         },
         {
           "member_id": "0AXry443jh",
-          "member_name": "Eduard Shevardnadze"
+          "member_name": "Eduard Shevardnadze",
+          "member_grades": []
         },
         {
           "member_id": "fdfdfsdfsf",
-          "member_name": "Nini Kopaliani"
+          "member_name": "Nini Kopaliani",
+          "member_grades": []
         },
         {
           "member_id": "fdsff34444",
-          "member_name": "Tetri Rashi"
+          "member_name": "Tetri Rashi",
+          "member_grades": []
         },
         {
           "member_id": "34fdvcvbbv",
-          "member_name": "Iakob Gogebashvili"
+          "member_name": "Iakob Gogebashvili",
+          "member_grades": []
         },
         {
           "member_id": "gfdfgfgdgd",
-          "member_name": "Akaki Wereteli"
+          "member_name": "Akaki Wereteli",
+          "member_grades": []
         },
         {
           "member_id": "hfjhjgjcxv",
-          "member_name": "Kolau Nadiradze"
+          "member_name": "Kolau Nadiradze",
+          "member_grades": []
         }
       ],
       "class_posts": [

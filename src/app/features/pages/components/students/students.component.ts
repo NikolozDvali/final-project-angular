@@ -47,7 +47,7 @@ export class StudentsComponent implements OnInit{
     return this.class_owner && member.member_id === this.class_owner.owner_id;
   }
 
-  setSelectedId(id: string){
+  setSelectedId(id: string | undefined){
     this.selectedStudentId = id;
   }
   
