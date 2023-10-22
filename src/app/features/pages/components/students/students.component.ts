@@ -49,9 +49,13 @@ export class StudentsComponent implements OnInit{
   gradeForm = this.formBuilder.group(
     {
       studentId: ['', Validators.required],
-      grade: [0, [Validators.required, Validators.max(10), Validators.min(0)]],
+      grade: [10, [Validators.required, Validators.max(10), Validators.min(0)]],
       comment: ['', ],
     }
   )
+
+  setSelectedId(id: string){
+    this.gradeForm.patchValue({ studentId: id });
+  }
   
 }

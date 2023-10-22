@@ -56,7 +56,7 @@
             </td>
             <td *ngIf="accountStatus == 'Teacher'">
               <div class="flex-center">
-                <button>Select ID</button>
+                <button (click)="setSelectedId(member.member_id)">Select ID</button>
               </div>
             </td>
           </ng-container>
