@@ -1,5 +1,26 @@
 <div class="wrapper">
   <div>
+
+    <form class="new-grade-wrapper" *ngIf="accountStatus == 'Teacher'">
+      <div>
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" placeholder="ID...">
+      </div>
+
+      <div>
+        <label id="grade">Grade [0-10]:</label>
+        <input type="number" max="10" min="0" placeholder="0">        
+      </div>
+
+      <div>
+        <label for="comment">Comment:</label>
+        <input type="text" placeholder="Comment..." id="comment"> 
+      </div>
+
+      <button>Add Grade</button>
+    </form>
+
+
     <div class="grade-data-wrapper" *ngIf="accountStatus =='Teacher'">
       <div *ngIf="selectedGrade != undefined">
         <p>{{selectedGrade.grade}}</p>
@@ -35,7 +56,7 @@
             </td>
             <td *ngIf="accountStatus == 'Teacher'">
               <div class="flex-center">
-                <button>Add grade</button>
+                <button>Select ID</button>
               </div>
             </td>
           </ng-container>

@@ -66,9 +66,9 @@ td {
         cursor: default;
     }
 
-    button{
+    button {
         cursor: pointer;
-        border: none; 
+        border: none;
         outline: none;
         border-radius: 4px;
         padding: 3px 5px;
@@ -126,7 +126,58 @@ td {
     }
 }
 
-.flex-center{
+.new-grade-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8D83C2;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Lato";
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+
+        label {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        input {
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: white;
+            color: #8D83C2;
+
+            &::placeholder {
+                color: #8D83C2;
+            }
+        }
+    }
+
+    button {
+        background-color: white;
+        color: #8D83C2;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      
+        &:not(:disabled) {
+          &:hover {
+            cursor: pointer;
+            background-color: #6d649a;
+            color: white;
+          }
+        }
+      
+        &:disabled {
+          background-color: #ccc;
+          color: #666;
+        }
+      }
+      
 }
