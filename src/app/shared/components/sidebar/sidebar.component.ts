@@ -16,6 +16,7 @@ import { PageControlService } from 'src/app/features/pages/services/pageControl/
 export class SidebarComponent implements OnInit{
   classes: ClassNames[] = [];
   name: string = '';
+  accountId: string = '';
   status: string = 'Student';
   selectedClassId = '';
 
@@ -32,6 +33,7 @@ export class SidebarComponent implements OnInit{
         this.classes = newAcc?.account_classes || [];
         this.name = newAcc?.account_name || '';
         this.status = newAcc?.account_type || "Student";
+        this.accountId = newAcc?.account_id || '';
       }
     )
     this.classroomService.selectedClassId.subscribe(
