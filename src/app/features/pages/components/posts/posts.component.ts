@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
 import { IClass, IPost } from 'src/app/shared/interfaces';
 import { NewPostFormComponent } from '../../../new-post-form/components/new-post-form/new-post-form.component';
+import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 
 @Component({
   selector: 'app-posts',
@@ -14,9 +15,11 @@ import { NewPostFormComponent } from '../../../new-post-form/components/new-post
 export class PostsComponent implements OnInit {
   classroomData: IClass | undefined;
   posts: IPost[] = [];
+  accountStatus: string = "Student"
   
   constructor(
-    private classroomService: ClassroomService
+    private classroomService: ClassroomService,
+    private accountService: AccountDataService
   ){}
 
   ngOnInit() {
@@ -24,6 +27,12 @@ export class PostsComponent implements OnInit {
       (classdata)=>{
         this.classroomData = classdata;
         this.posts = classdata?.class_posts || [];
+      }
+    )
+
+    this.accountService.loggedInAccount.subscribe(
+      (data)=>{
+        this.accountStatus = data?.account_type || 'Student';
       }
     )
   }

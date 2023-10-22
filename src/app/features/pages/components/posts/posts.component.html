@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <app-new-post-form></app-new-post-form>
+    <app-new-post-form *ngIf="accountStatus == 'Teacher'"></app-new-post-form>
 
    <div class="feed-wrapper">
         <div class="feed">

@@ -4,7 +4,7 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli00",
       "account_name": "Nikoloz Dvali",
-      "account_type": "student",
+      "account_type": "Teacher",
       "account_id": "HfDYg2wqAu",
       "account_classes": [
         {
@@ -42,7 +42,7 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_name": "Nikusha",
       "account_password": "paroli11",
-      "account_type": "student",
+      "account_type": "Student",
       "account_classes": [],
       "id": "0AXry4J3jh"
     },
@@ -50,7 +50,7 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_name": "Nikoloz Dvali",
       "account_password": "paroli22",
-      "account_type": "student",
+      "account_type": "Student",
       "account_classes": [],
       "id": "gKsbaNmqJX"
     }
