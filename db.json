@@ -65,15 +65,121 @@
       "class_members": [
         {
           "member_id": "0AXry4J3jh",
-          "member_name": "Nikoloz Dvali"
+          "member_name": "Nikoloz Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 5,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 7,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            }
+          ]
         },
         {
           "member_id": "0AXry4q3jh",
-          "member_name": "Sandro Kavlashvili"
+          "member_name": "Sandro Kavlashvili",
+          "member_grades": [
+            {
+              "grade": 4,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            }
+          ]
         },
         {
           "member_id": "0AXpy4J3jh",
-          "member_name": "Mariam Jafaridze"
+          "member_name": "Mariam Jafaridze",
+          "member_grades": [
+            {
+              "grade": 10,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 5,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 7,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 3,
+              "date": "Sunday, 22 October, 2023",
+              "comment":"Acted nicely"
+            },
+            {
+              "grade": 10,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 5,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 7,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 3,
+              "date": "Sunday, 22 October, 2023",
+              "comment":"Acted nicely"
+            },
+            {
+              "grade": 10,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 5,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 7,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 3,
+              "date": "Sunday, 22 October, 2023",
+              "comment":"Acted nicely"
+            },
+            {
+              "grade": 10,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 5,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 7,
+              "date":"Friday, 1 December, 2023",
+              "comment":"Did good job"
+            },
+            {
+              "grade": 3,
+              "date": "Sunday, 22 October, 2023",
+              "comment":"Acted nicely"
+            }
+          ]
         },
         {
           "member_id": "0AXry4J3jn",
