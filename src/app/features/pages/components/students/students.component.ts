@@ -36,7 +36,7 @@ export class StudentsComponent implements OnInit{
     )
   }
 
-  setSelectedGrade(grade: Grade){
+  setSelectedGrade(grade: Grade | undefined){
     this.selectedGrade = grade;
   }
 

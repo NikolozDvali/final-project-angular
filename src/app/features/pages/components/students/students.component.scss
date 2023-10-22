@@ -65,6 +65,22 @@ td {
         display: inline;
         cursor: default;
     }
+
+    button{
+        cursor: pointer;
+        border: none; 
+        outline: none;
+        border-radius: 4px;
+        padding: 3px 5px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: "Lato";
+        color: white;
+        background-color: #8D83C2;
+        width: 80%;
+        height: 90%;
+    }
 }
 
 .grade-data-wrapper {
@@ -108,4 +124,9 @@ td {
             color: #8D83C2;
         }
     }
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
 }

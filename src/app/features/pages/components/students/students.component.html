@@ -16,6 +16,7 @@
           <th>ID</th>
           <th>Name</th>
           <th *ngIf="accountStatus == 'Teacher'">Grades</th>
+          <th *ngIf="accountStatus == 'Teacher'">Add Grade</th>
         </tr>
       </thead>
       <tbody>
@@ -26,9 +27,16 @@
             <td *ngIf="accountStatus == 'Teacher'">
               <p>
                 <ng-container *ngFor="let gradeObj of member.member_grades; let last = last">
-                  <p (mouseenter)="setSelectedGrade(gradeObj)">{{ gradeObj.grade }} <span *ngIf="!last"> | </span> </p> 
+                  <p (mouseenter)="setSelectedGrade(gradeObj)" (mouseleave)="setSelectedGrade(undefined)">
+                    {{ gradeObj.grade }} <span *ngIf="!last"> | </span>
+                  </p>                                  
                 </ng-container>
               </p>
+            </td>
+            <td *ngIf="accountStatus == 'Teacher'">
+              <div class="flex-center">
+                <button>Add grade</button>
+              </div>
             </td>
           </ng-container>
         </tr>
