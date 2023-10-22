@@ -120,7 +120,20 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": [],
+      "class_posts": [
+        {
+          "post_title": "2",
+          "post_text": "Second",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "5RomRTPri6"
+        },
+        {
+          "post_title": "1",
+          "post_text": "First",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "fCsHnedePJ"
+        }
+      ],
       "id": "hjj"
     },
     {
@@ -304,28 +317,40 @@
       ],
       "class_posts": [
         {
-          "post_title": "4",
-          "post_text": "4",
+          "post_title": "6",
+          "post_text": "Sixth",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "9twimxe4px"
+          "post_id": "6Sp5mOeMEi"
+        },
+        {
+          "post_title": "5",
+          "post_text": "Fifth",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "x65tSG0PD9"
+        },
+        {
+          "post_title": "4",
+          "post_text": "Fourth",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "D4lWGsXj9N"
         },
         {
           "post_title": "3",
-          "post_text": "3",
+          "post_text": "Third",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "Tt5r0QP4t7"
+          "post_id": "02blOZDZxF"
         },
         {
           "post_title": "2",
-          "post_text": "2",
+          "post_text": "Second",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "b9UCcoUfjW"
+          "post_id": "dfxamd166Z"
         },
         {
           "post_title": "1",
-          "post_text": "1",
+          "post_text": "First",
           "post_date": "Sunday, October 22, 2023",
-          "post_id": "oSf3YGHBco"
+          "post_id": "9747o4oxn0"
         }
       ],
       "id": "bvbb"

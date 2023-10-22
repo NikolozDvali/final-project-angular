@@ -23,7 +23,7 @@ export class PostsComponent implements OnInit {
     this.classroomService.selectedClassData.subscribe(
       (classdata)=>{
         this.classroomData = classdata;
-        this.posts = classdata?.class_posts.reverse() || [];
+        this.posts = classdata?.class_posts || [];
       }
     )
   }

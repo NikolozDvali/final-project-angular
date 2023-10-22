@@ -26,7 +26,9 @@ export class ClassroomService {
         const classname = urlParts[urlParts.length - 2];
         const classid = this.accountService.loggedInAccount.value?.account_classes.find(elem=>elem.class_name==classname)?.id;
 
-        this.setSelectedClassId(classid || '');
+        if(classid){
+          this.setSelectedClassId(classid);
+        }
         }
       }
     )
