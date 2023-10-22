@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IClass } from '../../interfaces';
-import { map } from 'rxjs';
+import { Observable } from 'rxjs'; // You should import Observable
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +13,9 @@ export class ClassFetcherService {
     private http: HttpClient
   ) { }
 
-  getClassData(id: string) {
-    const url = `${this.baseUrl}?class_id=${id}`;
+  getClassData(id: string): Observable<IClass> {
+    const url = `${this.baseUrl}/${id}`;
     
-    return this.http.get<IClass[]>(url).pipe(
-      map((classes: IClass[]) => {
-        return classes[0]; 
-      })
-    );
+    return this.http.get<IClass>(url);
   }
 }

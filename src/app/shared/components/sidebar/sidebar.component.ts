@@ -33,7 +33,7 @@ export class SidebarComponent implements OnInit{
         this.classes = newAcc?.account_classes || [];
         this.name = newAcc?.account_name || '';
         this.status = newAcc?.account_type || "Student";
-        this.accountId = newAcc?.account_id || '';
+        this.accountId = newAcc?.id || '';
       }
     )
     this.classroomService.selectedClassId.subscribe(
@@ -52,7 +52,7 @@ export class SidebarComponent implements OnInit{
   }
 
   private getClassName(id: string){
-    return this.classes.find(elem=>elem.class_id == id)?.class_name;
+    return this.classes.find(elem=>elem.id == id)?.class_name;
   }
 
   logout(){

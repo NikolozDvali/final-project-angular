@@ -12,8 +12,8 @@
             <div 
                 *ngFor="let class of classes"
                 class="class"
-                [ngClass]="{'class-selected': class.class_id === selectedClassId}"
-                (click)="setSelectedClass(class.class_id)"
+                [ngClass]="{'class-selected': class.id === selectedClassId}"
+                (click)="setSelectedClass(class.id)"
             >
                 <p>{{class.class_name}}</p>
             </div>

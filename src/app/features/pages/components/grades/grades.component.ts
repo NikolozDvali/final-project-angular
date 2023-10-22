@@ -24,7 +24,7 @@ export class GradesComponent implements OnInit {
   ngOnInit(){
     this.classroomService.selectedClassData.subscribe(
       (newData)=>{
-        this.grades = (newData?.class_members.find(elem => elem.member_id == this.accountService.getAccountData()?.account_id)?.member_grades || []);
+        this.grades = (newData?.class_members.find(elem => elem.member_id == this.accountService.getAccountData()?.id)?.member_grades || []);
       }
     )
   }

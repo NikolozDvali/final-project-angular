@@ -24,7 +24,7 @@ export class ClassroomService {
       if (event instanceof NavigationEnd) {
         const urlParts = event.url.split('/');
         const classname = urlParts[urlParts.length - 2];
-        const classid = this.accountService.loggedInAccount.value?.account_classes.find(elem=>elem.class_name==classname)?.class_id;
+        const classid = this.accountService.loggedInAccount.value?.account_classes.find(elem=>elem.class_name==classname)?.id;
 
         this.setSelectedClassId(classid || '');
         }
@@ -50,7 +50,7 @@ export class ClassroomService {
 
 
   getClassData(id: string){
-    if(id=='') return;
+    if(!id) return;
 
     const data = localStorage.getItem('class/'+id);
     if(data){
@@ -60,6 +60,7 @@ export class ClassroomService {
 
     this.classFetcher.getClassData(id).subscribe(
       (data)=>{
+        if(!data) return;
        this.setSelectedClassData(data);
       }
     )
@@ -67,7 +68,7 @@ export class ClassroomService {
 
   
   setSelectedClassData(iclass: IClass){
-    localStorage.setItem("class/"+iclass.class_id, JSON.stringify(iclass));
+    localStorage.setItem("class/"+iclass.id, JSON.stringify(iclass));
     this.selectedClassData.next(iclass);
   }
 }

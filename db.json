@@ -7,15 +7,36 @@
       "account_type": "student",
       "account_id": "HfDYg2wqAu",
       "account_classes": [
-        {"class_name": "Math", "class_id": "gdfsgd"},
-        {"class_name": "Calculus", "class_id": "gdgs"},
-        {"class_name": "History", "class_id": "hgfd"},
-        {"class_name": "Abstractions", "class_id": "hjj"},
-        {"class_name": "Algorithms", "class_id": "jkcx"},
-        {"class_name": "Histology", "class_id": "hfhj"},
-        {"class_name": "Sociology", "class_id": "bvbb"}
+        {
+          "class_name": "Math",
+          "id": "gdfsgd"
+        },
+        {
+          "class_name": "Calculus",
+          "id": "gdgs"
+        },
+        {
+          "class_name": "History",
+          "id": "hgfd"
+        },
+        {
+          "class_name": "Abstractions",
+          "id": "hjj"
+        },
+        {
+          "class_name": "Algorithms",
+          "id": "jkcx"
+        },
+        {
+          "class_name": "Histology",
+          "id": "hfhj"
+        },
+        {
+          "class_name": "Sociology",
+          "id": "bvbb"
+        }
       ],
-      "id": 1
+      "id": "HfDYg2wqAu"
     },
     {
       "account_email": "ndval21@freeuni.edu.ge",
@@ -23,8 +44,7 @@
       "account_password": "paroli11",
       "account_type": "student",
       "account_classes": [],
-      "account_id": "0AXry4J3jh",
-      "id": 2
+      "id": "0AXry4J3jh"
     },
     {
       "account_email": "ndval21@freeuni.edu.ge",
@@ -32,16 +52,14 @@
       "account_password": "paroli22",
       "account_type": "student",
       "account_classes": [],
-      "account_id": "gKsbaNmqJX",
-      "id": 3
+      "id": "gKsbaNmqJX"
     }
   ],
   "classes": [
     {
       "class_name": "Math",
-      "class_id": "gdfsgd",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -50,13 +68,20 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [
+        {
+          "post_title": "TEST",
+          "post_text": "THIS IS TEST",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "mhcGWTN4CG"
+        }
+      ],
+      "id": "gdfsgd"
     },
     {
       "class_name": "Calculus",
-      "class_id": "gdgs",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -65,13 +90,13 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [],
+      "id": "gdgs"
     },
     {
       "class_name": "History",
-      "class_id": "hgfd",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -80,13 +105,13 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [],
+      "id": "hgfd"
     },
     {
       "class_name": "Abstractions",
-      "class_id": "hjj",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -95,13 +120,13 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [],
+      "id": "hjj"
     },
     {
       "class_name": "Algorithms",
-      "class_id": "jkcx",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -110,13 +135,13 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [],
+      "id": "jkcx"
     },
     {
       "class_name": "Histology",
-      "class_id": "hfhj",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -125,13 +150,13 @@
           "member_name": "Nikoloz_Dvali"
         }
       ],
-      "class_posts": []
+      "class_posts": [],
+      "id": "hfhj"
     },
     {
       "class_name": "Sociology",
-      "class_id": "bvbb",
       "class_owner": {
-        "owner_name":  "Nikoloz Dvali",
+        "owner_name": "Nikoloz Dvali",
         "owner_id": "HfDYg2wqAu"
       },
       "class_members": [
@@ -279,22 +304,13 @@
       ],
       "class_posts": [
         {
-          "post_title": "Assignment1",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
+          "post_title": "Hello",
+          "post_text": "Test\n",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "UkPrdSxuva"
         },
         {
-          "post_title": "Assignment2",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment3",
-          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
-          "post_date": "Saturday, 21 October, 2023"
-        },
-        {
-          "post_title": "Assignment4",
+          "post_title": "Assignment6",
           "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
           "post_date": "Saturday, 21 October, 2023"
         },
@@ -304,11 +320,33 @@
           "post_date": "Saturday, 21 October, 2023"
         },
         {
-          "post_title": "Assignment6",
+          "post_title": "Assignment4",
           "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
           "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Assignment3",
+          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
+          "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Assignment2",
+          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
+          "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Assignment1",
+          "post_text": "Hello, this is assignment 1. This is test assignment to test if my app works correctly. I am writing more and more words like this. Writing random stuff is not fun at all.",
+          "post_date": "Saturday, 21 October, 2023"
+        },
+        {
+          "post_title": "Test also",
+          "post_text": "gfdgdfg",
+          "post_date": "Sunday, October 22, 2023",
+          "post_id": "K5I1ed3Qj3"
         }
-      ]
+      ],
+      "id": "bvbb"
     }
   ]
 }

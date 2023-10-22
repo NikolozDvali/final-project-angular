@@ -17,8 +17,8 @@ export class RegisterService {
   ) {}
 
   register(account: Account): Observable<boolean> {
-    const iaccount: IAccount = { ...account, account_id: ''};
-    iaccount.account_id = this.random.generateRandomId();
+    const iaccount: IAccount = { ...account, id: ''};
+    iaccount.id = this.random.generateRandomId();
   
     return this.http.get<IAccount[]>(this.accountsUrl, { params: { account_email: iaccount.account_email, account_password: iaccount.account_password } })
       .pipe(
@@ -42,7 +42,7 @@ export class RegisterService {
       map(() => true),
       catchError((err: HttpErrorResponse) => {
         if (err.status === 409) {
-          iaccount.account_id = this.random.generateRandomId();
+          iaccount.id = this.random.generateRandomId();
           return this.postRequest(iaccount);
         } else {
           return throwError(err);

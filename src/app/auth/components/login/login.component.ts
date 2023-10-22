@@ -41,7 +41,7 @@ export class LoginComponent {
           this.accountService.setLoggedInAccout(response);
           this.showErrorMessage = false;
           const cls = response.account_classes[0];
-          this.classroomService.setSelectedClassId(cls.class_id);
+          this.classroomService.setSelectedClassId(cls.id);
           this.router.navigate(['/main/'+cls.class_name+'/posts'])
         }
       }

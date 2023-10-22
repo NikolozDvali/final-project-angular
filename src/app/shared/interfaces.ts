@@ -7,12 +7,12 @@ export interface Account{
 }
 
 export interface ClassNames{
-    class_id: string,
+    id: string,
     class_name: string,
 }
 
 export interface IAccount extends Account{
-    account_id: string,
+    id: string,
 }
 
 export interface Class{
@@ -23,7 +23,7 @@ export interface Class{
 }
 
 export interface IClass extends Class{
-    class_id: string
+    id: string
 }
 
 export interface Owner{

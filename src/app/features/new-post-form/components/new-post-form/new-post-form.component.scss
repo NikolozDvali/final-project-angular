@@ -73,8 +73,8 @@
                 background-color: #ccc; 
             }
             
-            &:hover {
-                background-color: #6b5b9e;
+            &:not(:disabled):hover {
+                background-color: #6b5b9e; 
             }
         }
     }

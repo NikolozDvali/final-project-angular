@@ -1,17 +1,17 @@
 <div class="post-form-container">
-    <form class="post-form">
+    <form class="post-form" [formGroup]="postForm" (ngSubmit)="post()">
         <p class="new-post-header">Add New Post</p>
 
         <div>
             <label for="title">Enter Post Title:</label>
-            <input class="title-input" type="text" id="title" autocomplete="additional-name" placeholder="Title...">
+            <input formControlName="post_title" class="title-input" type="text" id="title" autocomplete="additional-name" placeholder="Title...">
         </div>
 
         <div>
             <label for="post-text">Write Post:</label>
-            <textarea id="post-text" placeholder="Post..."></textarea>
+            <textarea formControlName="post_text" id="post-text" placeholder="Post..."></textarea>
         </div>
 
-        <button>Post</button>
+        <button [disabled]="!postForm.valid" type="submit">Post</button>
     </form>
 </div>
