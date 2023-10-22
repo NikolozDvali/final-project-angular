@@ -1,7 +1,7 @@
 <div class="wrapper">
-    <div class="anchors">
+    <div class="anchors" *ngIf="isInClassroom">
         <a [ngClass]="{ 'selected': selectedPage === 'posts' }" (click)="setSelectedPage('posts')">Posts</a>
-        <a [ngClass]="{ 'selected': selectedPage === 'grades' }" (click)="setSelectedPage('grades')">Grades</a>
+        <a *ngIf="accountStatus=='Student'" [ngClass]="{ 'selected': selectedPage === 'grades' }" (click)="setSelectedPage('grades')">Grades</a>
         <a [ngClass]="{ 'selected': selectedPage === 'students' }" (click)="setSelectedPage('students')">Students</a>
     </div>
 </div>

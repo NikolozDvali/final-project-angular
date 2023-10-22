@@ -5,6 +5,7 @@ import { Router, RouterLink } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
+import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class LoginComponent {
     private loginService: LoginService,
     private accountService: AccountDataService,
     private router: Router,
-    private classroomService: ClassroomService
+    private classroomService: ClassroomService,
+    private pageService: PageControlService
   ){}
 
   login(){
@@ -41,8 +43,12 @@ export class LoginComponent {
           this.accountService.setLoggedInAccout(response);
           this.showErrorMessage = false;
           const cls = response.account_classes[0];
-          this.classroomService.setSelectedClassId(cls.id);
-          this.router.navigate(['/main/'+cls.class_name+'/posts'])
+          if(cls!=undefined){
+            this.classroomService.setSelectedClassId(cls.id);
+            this.router.navigate(['main', cls.class_name, 'posts']);
+          }else{
+            this.router.navigate(['/main'])
+          }
         }
       }
     );

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
 import { Member, Owner } from 'src/app/shared/interfaces';
+import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 
 @Component({
   selector: 'app-students',
@@ -13,9 +14,11 @@ import { Member, Owner } from 'src/app/shared/interfaces';
 export class StudentsComponent implements OnInit{
   class_owner: Owner | undefined;
   class_members: Member[] = [];
+  accountStatus = "Student";
 
   constructor(
-    private classroomService: ClassroomService
+    private classroomService: ClassroomService,
+    private accountService: AccountDataService
   ){}
 
   ngOnInit(){
@@ -23,6 +26,11 @@ export class StudentsComponent implements OnInit{
       (data)=>{
         this.class_members = data?.class_members || [];
         this.class_owner = data?.class_owner;
+      }
+    )
+    this.accountService.loggedInAccount.subscribe(
+      (acc)=>{
+        this.accountStatus = acc?.account_type || 'Status';
       }
     )
   }

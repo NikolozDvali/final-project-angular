@@ -15,7 +15,9 @@ export class PageControlService {
       if (event instanceof NavigationEnd) {
         const urlParts = event.url.split('/');
         const lastPart = urlParts[urlParts.length - 1];
-        this.updatePage(lastPart);
+        if(lastPart == 'posts' || lastPart == 'students' || lastPart == 'grades'){
+          this.updatePage(lastPart);
+        }
       }
     });
 

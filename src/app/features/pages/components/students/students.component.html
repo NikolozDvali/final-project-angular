@@ -2,8 +2,9 @@
     <table>
         <thead>
           <tr>
-            <th>Member ID</th>
-            <th>Member Name</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th *ngIf="accountStatus == 'Teacher'">Grades</th>
           </tr>
         </thead>
         <tbody>
