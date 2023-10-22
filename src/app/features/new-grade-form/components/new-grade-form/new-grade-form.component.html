@@ -1,4 +1,4 @@
-<form [formGroup]="gradeForm" class="new-grade-wrapper">
+<form [formGroup]="gradeForm" class="new-grade-wrapper" (ngSubmit)="addGrade()">
     <div>
       <label for="student_id">Student ID:</label>
       <input formControlName="studentId" type="text" id="student_id" placeholder="ID...">
