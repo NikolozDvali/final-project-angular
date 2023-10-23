@@ -1,7 +1,7 @@
 <div class="add-student-wrapper">
-    <form>
+    <form [formGroup]="newStudentForm">
         <label for="studentId">Enter ID Of student you want to add: </label>
-        <input type="text" id="studentId" placeholder="ID...">
-        <button>Add Student</button>
+        <input formControlName="studentId" type="text" id="studentId" placeholder="ID...">
+        <button [disabled]="!newStudentForm.valid">Add Student</button>
     </form>
 </div>
