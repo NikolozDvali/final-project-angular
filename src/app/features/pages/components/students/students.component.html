@@ -1,11 +1,5 @@
 <div class="wrapper">
   <div>
-    
-    <app-new-grade-form 
-      *ngIf="accountStatus == 'Teacher'"
-      [selectedStudentId]="selectedStudentId"
-      (selectedStudentChangeEvent)="setSelectedId($event)"
-    ></app-new-grade-form>
 
     <div class="grade-data-wrapper" *ngIf="accountStatus =='Teacher'">
       <div *ngIf="selectedGrade != undefined">
@@ -16,6 +10,12 @@
       <p *ngIf="selectedGrade === undefined">Hover on grade to see grade info</p>
     
     </div>
+    
+    <app-new-grade-form 
+      *ngIf="accountStatus == 'Teacher'"
+      [selectedStudentId]="selectedStudentId"
+      (selectedStudentChangeEvent)="setSelectedId($event)"
+    ></app-new-grade-form>
   
     <table>
       <thead>
