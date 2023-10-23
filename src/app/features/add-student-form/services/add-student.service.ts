@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, of, switchMap, throwError } from 'rxjs';
+import { Observable, catchError, map, of, switchMap, throwError } from 'rxjs';
 import { ClassNames, IAccount, IClass } from 'src/app/shared/interfaces';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
@@ -13,6 +13,7 @@ export class AddStudentService {
 
   currentAccount: IAccount | undefined;
   currentClass: IClass | undefined
+  studentClasses: ClassNames[] = [];
 
   constructor(
     private http: HttpClient,
@@ -62,8 +63,8 @@ export class AddStudentService {
       map(
         (studData)=>{
           if(!studData) return "Student with this ID does not exist";
-          const currentClasses = studData.account_classes;
-          const isAlreadyInThisClass = currentClasses.find((classroom)=>classroom.id == this.currentClass?.id);
+          this.studentClasses = studData.account_classes;
+          const isAlreadyInThisClass = this.studentClasses.find((classroom)=>classroom.id == this.currentClass?.id);
           if(isAlreadyInThisClass){
             return "Student is already in this class";
           }
@@ -81,8 +82,8 @@ export class AddStudentService {
       id: this.currentClass?.id as string,
       class_name: this.currentClass?.class_name as string,
     }
-
-    const classes = this.currentAccount?.account_classes;
+    
+    const classes = this.studentClasses;
     classes?.push(newClassObj);   
     
 

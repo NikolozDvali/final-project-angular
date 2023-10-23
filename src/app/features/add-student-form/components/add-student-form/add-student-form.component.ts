@@ -26,7 +26,6 @@ export class AddStudentFormComponent {
     const studentId = this.newStudentForm.controls.studentId.value;
     if(!studentId) return;
     this.addStudentService.addStudentToCurrentClass(studentId).subscribe(
-        (resp)=>console.log(resp)
     );
     this.newStudentForm.reset();
   }
