@@ -59,4 +59,8 @@ export class SidebarComponent implements OnInit{
     this.accountService.logout();
     this.router.navigate(['/auth/login']);
   }
+
+  goToNewClassPage(){
+    this.router.navigate(['/newclass']);
+  }
 }
