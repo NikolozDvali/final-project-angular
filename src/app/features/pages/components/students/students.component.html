@@ -50,6 +50,8 @@
     (selectedStudentChangeEvent)="setSelectedId($event)"
     ></app-new-grade-form>
 
-    <app-add-student-form></app-add-student-form>
+    <app-add-student-form
+    *ngIf="accountStatus == 'Teacher'"
+    ></app-add-student-form>
   </div>
 </div>
