@@ -6,7 +6,10 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli00",
       "account_classes": [
-        {"id": "clasiid0", "class_name": "Calculus"}
+        {
+          "id": "clasiid0",
+          "class_name": "Calculus"
+        }
       ],
       "id": "accountid0"
     },
@@ -16,7 +19,6 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
       "account_classes": [
-       
       ],
       "id": "accountid1"
     }
@@ -29,7 +31,6 @@
         "owner_name": "Nikoloz Dvali"
       },
       "class_members": [
-       
       ],
       "class_posts": [],
       "id": "clasiid0"

@@ -13,7 +13,7 @@ export class AddStudentService {
 
   currentAccount: IAccount | undefined;
   currentClass: IClass | undefined
-  studentClasses: ClassNames[] = [];
+  studentAccount: IAccount | undefined;
 
   constructor(
     private http: HttpClient,
@@ -63,8 +63,8 @@ export class AddStudentService {
       map(
         (studData)=>{
           if(!studData) return "Student with this ID does not exist";
-          this.studentClasses = studData.account_classes;
-          const isAlreadyInThisClass = this.studentClasses.find((classroom)=>classroom.id == this.currentClass?.id);
+          this.studentAccount = studData;
+          const isAlreadyInThisClass = this.studentAccount.account_classes.find((classroom)=>classroom.id == this.currentClass?.id);
           if(isAlreadyInThisClass){
             return "Student is already in this class";
           }
@@ -83,7 +83,7 @@ export class AddStudentService {
       class_name: this.currentClass?.class_name as string,
     }
     
-    const classes = this.studentClasses;
+    const classes = this.studentAccount?.account_classes;
     classes?.push(newClassObj);   
     
 
@@ -92,8 +92,8 @@ export class AddStudentService {
           const members = this.currentClass?.class_members;
 
           const newMemberObj = {
-            member_id: this.currentAccount?.id as string,
-            member_name: this.currentAccount?.account_name as string,
+            member_id: studentId as string,
+            member_name: this.studentAccount?.account_name as string,
             member_grades: []
           }
           
