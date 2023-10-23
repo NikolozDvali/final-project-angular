@@ -5,11 +5,12 @@ import { Grade, Member, Owner } from 'src/app/shared/interfaces';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NewGradeFormComponent } from 'src/app/features/new-grade-form/components/new-grade-form/new-grade-form.component';
+import { AddStudentFormComponent } from 'src/app/features/add-student-form/components/add-student-form/add-student-form.component';
 
 @Component({
   selector: 'app-students',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, NewGradeFormComponent],
+  imports: [CommonModule, ReactiveFormsModule, NewGradeFormComponent, AddStudentFormComponent],
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.scss']
 })
