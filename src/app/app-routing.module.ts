@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { isTeacherGuard } from './shared/guards/is-teacher/is-teacher.guard';
+import { isStudentGuard } from './shared/guards/is-student/is-student.guard';
+import { isLoggedInGuard } from './shared/guards/is-logged-in/is-logged-in.guard';
+import { isLoggedOutGuard } from './shared/guards/is-logged-out/is-logged-out.guard';
 
 const routes: Routes = [
   {
@@ -9,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'auth',
+    canActivate: [isLoggedOutGuard],
     children: [
       {
         path: '',
@@ -31,6 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'main',
+    canActivate: [isLoggedInGuard],
     loadComponent: () =>
       import('./core/components/main-page/main-page.component')
       .then((m) => m.MainPageComponent),
@@ -53,7 +59,8 @@ const routes: Routes = [
             path: 'grades',
             loadComponent: 
               ()=>import('./features/pages/components/grades/grades.component')
-              .then(m=>m.GradesComponent)
+              .then(m=>m.GradesComponent),
+            canActivate: [isStudentGuard]
           },
           {
             path: 'students',
@@ -69,8 +76,15 @@ const routes: Routes = [
     path: 'newclass',
     loadComponent:
       ()=>import('./features/add-class-page/components/add-class/add-class.component')
-      .then(m=>m.AddClassComponent)
-  }
+      .then(m=>m.AddClassComponent),
+    canActivate: [isTeacherGuard]
+  },
+  {
+    path: '**',
+    loadComponent: 
+      ()=>import('./core/components/page-not-found/page-not-found.component')
+      .then(m=>m.PageNotFoundComponent)
+  },
 ];
 
 @NgModule({

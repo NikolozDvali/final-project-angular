@@ -28,4 +28,12 @@ export class AccountDataService {
   getAccountData(){
     return this.loggedInAccount.getValue();
   }
+
+  isLoggedIn(){
+    return this.loggedInAccount.value !== undefined;
+  }
+
+  isTeacher(){
+    return this.loggedInAccount.value?.account_type=="Teacher";
+  }
 }
