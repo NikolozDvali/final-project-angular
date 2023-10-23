@@ -68,7 +68,7 @@ const routes: Routes = [
   {
     path: 'newclass',
     loadComponent:
-      ()=>import('./features/pages/components/add-class/add-class.component')
+      ()=>import('./features/add-class-page/components/add-class/add-class.component')
       .then(m=>m.AddClassComponent)
   }
 ];
