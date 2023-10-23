@@ -10,12 +10,6 @@
       <p *ngIf="selectedGrade === undefined">Hover on grade to see grade info</p>
     
     </div>
-    
-    <app-new-grade-form 
-      *ngIf="accountStatus == 'Teacher'"
-      [selectedStudentId]="selectedStudentId"
-      (selectedStudentChangeEvent)="setSelectedId($event)"
-    ></app-new-grade-form>
   
     <table>
       <thead>
@@ -49,6 +43,12 @@
         </tr>
       </tbody>
     </table>
+
+    <app-new-grade-form 
+    *ngIf="accountStatus == 'Teacher'"
+    [selectedStudentId]="selectedStudentId"
+    (selectedStudentChangeEvent)="setSelectedId($event)"
+    ></app-new-grade-form>
 
     <app-add-student-form></app-add-student-form>
   </div>

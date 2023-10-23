@@ -1,7 +1,7 @@
 .add-student-wrapper {
     width: 600px;
-    background-color: white;
-    border-radius: 10px;
+    background-color: #8D83C2;
+    border-radius: 6px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +18,7 @@ form {
 }
 
 label {
-    color: #8D83C2;
+    color: white;
     margin-right: 10px;
 }
 
@@ -29,8 +29,8 @@ input[type="text"] {
 }
 
 button {
-    background-color: #8D83C2;
-    color: white;
+    background-color: white;
+    color: #8D83C2;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
