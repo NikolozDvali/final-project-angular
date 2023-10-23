@@ -1,7 +1,7 @@
 <div class="add-student-wrapper">
     <form [formGroup]="newStudentForm" (ngSubmit)="addStudent()">
         <label for="studentId">Enter ID Of student you want to add: </label>
-        <input formControlName="studentId" type="text" id="studentId" placeholder="ID...">
+        <input autocomplete="additional-name" formControlName="studentId" type="text" id="studentId" placeholder="ID...">
         <button type="submit" [disabled]="!newStudentForm.valid">Add Student</button>
     </form>
     <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>

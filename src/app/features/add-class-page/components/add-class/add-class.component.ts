@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AddClassService } from '../../services/add-class.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-add-class',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-class.component.html',
   styleUrls: ['./add-class.component.scss']
 })
@@ -16,7 +19,9 @@ export class AddClassComponent {
   constructor(
     private router: Router,
     private accountService: AccountDataService,
-    private classroomService: ClassroomService
+    private classroomService: ClassroomService,
+    private formBuilder: FormBuilder,
+    private addClassService: AddClassService
   ){}
 
   goToMain(){
@@ -27,5 +32,21 @@ export class AddClassComponent {
     }else{
       this.router.navigate(['/main'])
     }
+  }
+
+  classForm = this.formBuilder.group({
+    name: ['', Validators.required]
+  })
+
+  addClass(){
+    const className = this.classForm.value.name;
+    this.classForm.reset();
+    if(!className) return;
+    this.addClassService.addClass(className).subscribe(
+      (data)=>{
+        if(data!==true) return;
+        this.router.navigate([`main/${className}/posts`])
+      }
+    )
   }
 }

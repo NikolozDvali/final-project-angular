@@ -2,17 +2,17 @@
   <div class="form-inputs">
     <div>
       <label for="student_id">Student ID:</label>
-      <input formControlName="studentId" type="text" id="student_id" placeholder="ID...">
+      <input autocomplete="student-id" formControlName="studentId" type="text" id="student_id" placeholder="ID...">
     </div>
 
     <div>
-      <label id="grade">Grade [0-10]:</label>
-      <input formControlName="grade" type="number" max="10" min="0" placeholder="0">        
+      <label for="grade">Grade [0-10]:</label>
+      <input id="grade" autocomplete="grade" formControlName="grade" type="number" max="10" min="0" placeholder="0">        
     </div>
 
     <div>
       <label for="comment">Comment:</label>
-      <input formControlName="comment" type="text" placeholder="Comment..." id="comment"> 
+      <input autocomplete="none" formControlName="comment" type="text" placeholder="Comment..." id="comment"> 
     </div>
 
     <button [disabled]="!gradeForm.valid">Add Grade</button>
