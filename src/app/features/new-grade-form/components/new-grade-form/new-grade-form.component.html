@@ -1,4 +1,5 @@
 <form [formGroup]="gradeForm" class="new-grade-wrapper" (ngSubmit)="addGrade()">
+  <div class="form-inputs">
     <div>
       <label for="student_id">Student ID:</label>
       <input formControlName="studentId" type="text" id="student_id" placeholder="ID...">
@@ -15,4 +16,7 @@
     </div>
 
     <button [disabled]="!gradeForm.valid">Add Grade</button>
+  </div>
+
+  <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
 </form>

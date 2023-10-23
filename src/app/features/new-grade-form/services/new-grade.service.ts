@@ -25,7 +25,7 @@ export class NewGradeService {
 
         this.updateClassroom(studentId, grade);
         return of(userCheck);
-      })
+      }),
     );
   }
 
@@ -55,11 +55,7 @@ export class NewGradeService {
         }
       }),
       catchError(error => {
-        if (error.status === 404) {
-          return of('This Student Does Not Exist');
-        } else {
-          return of('An error occurred');
-        }
+        return of('An error occurred');
       })
     );
   }

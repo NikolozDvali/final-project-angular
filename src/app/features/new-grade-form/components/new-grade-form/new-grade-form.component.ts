@@ -17,6 +17,8 @@ export class NewGradeFormComponent implements OnChanges{
   @Input() selectedStudentId: string | undefined;
   @Output() selectedStudentChangeEvent = new EventEmitter<string | undefined>();
 
+  errorMessage = '';
+
   constructor(
     private formBuilder: FormBuilder,
     private dateService: DateService,
@@ -48,7 +50,12 @@ export class NewGradeFormComponent implements OnChanges{
     }
 
    this.newGradeService.addNewGrade(this.selectedStudentId || '', grade).subscribe(
-    ()=>{
+    (resp)=>{
+      if(resp!=='SUCCESS'){
+        this.errorMessage = resp;
+      }else{
+        this.errorMessage = '';
+      }
       this.selectedStudentChangeEvent.emit(undefined);
     }
    );

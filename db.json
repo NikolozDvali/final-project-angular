@@ -62,7 +62,23 @@
         {
           "member_id": "accountid2",
           "member_name": "Andria Dvali",
-          "member_grades": []
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            },
+            {
+              "grade": 3,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            },
+            {
+              "grade": 3,
+              "comment": "",
+              "date": "Monday, October 23, 2023"
+            }
+          ]
         }
       ],
       "class_posts": [
