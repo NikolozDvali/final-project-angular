@@ -19,6 +19,10 @@
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
       "account_classes": [
+        {
+          "id": "clasiid0",
+          "class_name": "Calculus"
+        }
       ],
       "id": "accountid1"
     }
@@ -31,6 +35,17 @@
         "owner_name": "Nikoloz Dvali"
       },
       "class_members": [
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "Behaved well",
+              "date": "Monday, October 23, 2023"
+            }
+          ]
+        }
       ],
       "class_posts": [],
       "id": "clasiid0"

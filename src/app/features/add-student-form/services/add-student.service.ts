@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, switchMap, throwError } from 'rxjs';
-import { ClassNames, IAccount, IClass } from 'src/app/shared/interfaces';
+import { ClassNames, IAccount, IClass, Member } from 'src/app/shared/interfaces';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
 
@@ -99,10 +99,18 @@ export class AddStudentService {
           
           members?.push(newMemberObj)
 
+          this.updateLocally(members || []);
+
           return this.http.patch(classUrl, { class_members: members });
         }
       ) 
     )
+  }
+
+  private updateLocally(members: Member[]){
+    const classData = this.currentClass as IClass;
+    classData.class_members = members;
+    localStorage.setItem("class/"+classData.id, JSON.stringify(classData));
   }
 }
 
