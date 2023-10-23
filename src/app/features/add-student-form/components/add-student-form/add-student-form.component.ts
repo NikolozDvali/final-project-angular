@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AddStudentService } from '../../services/add-student.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-add-student-form',
@@ -24,7 +25,9 @@ export class AddStudentFormComponent {
   addStudent(){
     const studentId = this.newStudentForm.controls.studentId.value;
     if(!studentId) return;
-    this.addStudentService.addStudentToCurrentClass(studentId);
+    this.addStudentService.addStudentToCurrentClass(studentId).subscribe(
+        (resp)=>console.log(resp)
+    );
     this.newStudentForm.reset();
   }
 }
