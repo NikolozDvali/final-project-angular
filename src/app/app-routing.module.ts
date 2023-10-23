@@ -62,8 +62,14 @@ const routes: Routes = [
               .then(m=>m.StudentsComponent)
           }
         ]
-      }
+      },
     ]
+  },
+  {
+    path: 'newclass',
+    loadComponent:
+      ()=>import('./features/pages/components/add-class/add-class.component')
+      .then(m=>m.AddClassComponent)
   }
 ];
 
