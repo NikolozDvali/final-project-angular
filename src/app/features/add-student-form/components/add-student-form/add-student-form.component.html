@@ -4,4 +4,5 @@
         <input formControlName="studentId" type="text" id="studentId" placeholder="ID...">
         <button type="submit" [disabled]="!newStudentForm.valid">Add Student</button>
     </form>
+    <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
 </div>

@@ -12,6 +12,7 @@ import { map } from 'rxjs';
   styleUrls: ['./add-student-form.component.scss']
 })
 export class AddStudentFormComponent {
+  errorMessage = "";
 
   constructor(
     private formBuilder: FormBuilder,
@@ -26,6 +27,9 @@ export class AddStudentFormComponent {
     const studentId = this.newStudentForm.controls.studentId.value;
     if(!studentId) return;
     this.addStudentService.addStudentToCurrentClass(studentId).subscribe(
+      (result)=>{
+        this.errorMessage = result || '';
+      }
     );
     this.newStudentForm.reset();
   }

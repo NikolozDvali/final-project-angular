@@ -19,14 +19,14 @@ export class AddStudentService {
     private http: HttpClient,
     private classroomService: ClassroomService,
     private accountService: AccountDataService
-  ) { 
+  ) {
     this.classroomService.selectedClassData.subscribe(
-      (classData)=>{
+      (classData) => {
         this.currentClass = classData;
       }
     )
     this.accountService.loggedInAccount.subscribe(
-      (accountData)=>{
+      (accountData) => {
         this.currentAccount = accountData;
       }
     )
@@ -39,78 +39,84 @@ export class AddStudentService {
   //4. add student data to classroom (locally and in db);
   addStudentToCurrentClass(studentID: string) {
     return this.checkStudent(studentID).pipe(
-      switchMap((result) => {
-        if (result !== "SUCCESS") {
-          return of(result);
-        } else {
-          return this.patchStudent(studentID).pipe(
-            map((res) => {
-              return res;
-            }),
-            catchError((err) => {
-              return throwError(err);
-            })
-          );
-        }
-      })
+      switchMap(
+        (result) => {
+          if (result !== "SUCCESS") {
+            return of(result);
+          } else {
+            return this.patchStudent(studentID).pipe(
+              map(() => {
+                return '';
+              })
+            );
+          }
+        })
     );
   }
-  
 
-  private checkStudent(studentId: string){
-    const url = this.baseUrl+'/accounts/'+studentId;
+
+  private checkStudent(studentId: string) {
+    const url = this.baseUrl + '/accounts/' + studentId;
     return this.http.get<IAccount | undefined>(url).pipe(
       map(
-        (studData)=>{
-          if(!studData) return "Student with this ID does not exist";
+        (studData) => {
           this.studentAccount = studData;
-          const isAlreadyInThisClass = this.studentAccount.account_classes.find((classroom)=>classroom.id == this.currentClass?.id);
-          if(isAlreadyInThisClass){
+          const isAlreadyInThisClass = this.studentAccount?.account_classes.find((classroom) => classroom.id == this.currentClass?.id);
+          if (isAlreadyInThisClass) {
             return "Student is already in this class";
           }
           return "SUCCESS";
+        }
+      ),
+      catchError(
+        (error) => {
+          if(error.status==404){
+            return of("Student with this ID does not exist");
+          }
+          return of("Error occured, Try again later")
         }
       )
     )
   }
 
-  private patchStudent(studentId: string){  
-    const accountUrl = this.baseUrl+'/accounts/'+studentId;
-    const classUrl = this.baseUrl+'/classes/'+this.currentClass?.id;
+  private patchStudent(studentId: string) {
+    const accountUrl = this.baseUrl + '/accounts/' + studentId;
+    const classUrl = this.baseUrl + '/classes/' + this.currentClass?.id;
 
     const newClassObj = {
       id: this.currentClass?.id as string,
       class_name: this.currentClass?.class_name as string,
     }
-    
+
     const classes = this.studentAccount?.account_classes;
-    classes?.push(newClassObj);   
-    
+    classes?.push(newClassObj);
 
-    return this.http.patch(accountUrl, {account_classes: classes}).pipe(
-      switchMap(()=>{
-          const members = this.currentClass?.class_members;
 
-          const newMemberObj = {
-            member_id: studentId as string,
-            member_name: this.studentAccount?.account_name as string,
-            member_grades: []
-          }
-          
-          members?.push(newMemberObj)
+    return this.http.patch(accountUrl, { account_classes: classes }).pipe(
+      switchMap(() => {
+        const members = this.currentClass?.class_members;
 
-          this.updateLocally(members || []);
-
-          return this.http.patch(classUrl, { class_members: members });
+        const newMemberObj = {
+          member_id: studentId as string,
+          member_name: this.studentAccount?.account_name as string,
+          member_grades: []
         }
-      ) 
+
+        members?.push(newMemberObj)
+
+        this.updateLocally(members || []);
+
+        return this.http.patch(classUrl, { class_members: members });
+      }
+      ),
+      catchError(() => of("An error occurred, Try again"))
     )
   }
 
-  private updateLocally(members: Member[]){
+  private updateLocally(members: Member[]) {
     const classData = this.currentClass as IClass;
     classData.class_members = members;
-    localStorage.setItem("class/"+classData.id, JSON.stringify(classData));
+    localStorage.setItem("class/" + classData.id, JSON.stringify(classData));
   }
 }
 

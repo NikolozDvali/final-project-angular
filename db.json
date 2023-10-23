@@ -25,6 +25,19 @@
         }
       ],
       "id": "accountid1"
+    },
+    {
+      "account_name": "Andria Dvali",
+      "account_type": "Student",
+      "account_email": "ndval21@freeuni.edu.ge",
+      "account_password": "paroli22",
+      "account_classes": [
+        {
+          "id": "clasiid0",
+          "class_name": "Calculus"
+        }
+      ],
+      "id": "accountid2"
     }
   ],
   "classes": [
@@ -45,9 +58,21 @@
               "date": "Monday, October 23, 2023"
             }
           ]
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": []
         }
       ],
-      "class_posts": [],
+      "class_posts": [
+        {
+          "post_title": "Hello",
+          "post_text": "Hello students. My name is Nikoloz Dvali and I will be teaching you calculus. Calculus is branch of math that is interested in continuity. Calculus was invented by two world famous scientists, Isaac Newton and Gotfried Leibniz. Two main concepts of calculus are Integrals and Derivatives. But, before we study those, we must learn limits first. So, for your first assignment, I want you to look up in the internet what are the limits.",
+          "post_date": "Monday, October 23, 2023",
+          "post_id": "lVLRW62bwl"
+        }
+      ],
       "id": "clasiid0"
     }
   ]
