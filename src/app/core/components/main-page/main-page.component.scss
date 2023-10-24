@@ -9,4 +9,8 @@
         max-height: 100vh;
     }
 
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
 }

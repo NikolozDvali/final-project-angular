@@ -21,6 +21,12 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 1000px) {
+            max-width: 100%;
+            width: 100%;
+            justify-content: space-around;
+        }
+
         >a{
             cursor: pointer;
             color: #A8AEB1;
