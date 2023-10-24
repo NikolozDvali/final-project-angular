@@ -24,6 +24,8 @@ export class StudentsComponent implements OnInit, OnDestroy{
   selectedGrade: Grade | undefined;
   selectedStudentId: string | undefined;
 
+  shortenWidth = false;
+
   private accountSubscription: Subscription | undefined;
   private classroomSubscription: Subscription | undefined;
 
@@ -38,6 +40,11 @@ export class StudentsComponent implements OnInit, OnDestroy{
     this.classroomSubscription = this.classroomService.selectedClassData.subscribe(
       (data)=>{
         this.class_members = data?.class_members || [];
+        if(this.class_members.length>11){
+          this.shortenWidth = true;
+        }else{
+          this.shortenWidth = false;
+        }
         this.class_owner = data?.class_owner;
         this.cdr.markForCheck();
       }

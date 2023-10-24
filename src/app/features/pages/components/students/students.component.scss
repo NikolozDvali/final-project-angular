@@ -42,8 +42,12 @@ tbody tr {
 }
 
 thead {
-    width: calc(100% - 1em);
     background-color: #8D83C2;
+}
+
+.short{
+    width: calc(100% - 1em);
+
 }
 
 th {
@@ -124,4 +128,10 @@ td {
             color: #8D83C2;
         }
     }
+}
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
 }
