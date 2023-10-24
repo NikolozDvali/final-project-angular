@@ -5,11 +5,13 @@ import { isStudentGuard } from './shared/guards/is-student/is-student.guard';
 import { isLoggedInGuard } from './shared/guards/is-logged-in/is-logged-in.guard';
 import { isLoggedOutGuard } from './shared/guards/is-logged-out/is-logged-out.guard';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'auth',
+    loadComponent: 
+      ()=>import('./core/components/page-not-found/page-not-found.component')
+      .then(m=>m.PageNotFoundComponent)
   },
   {
     path: 'auth',
@@ -41,6 +43,11 @@ const routes: Routes = [
       import('./core/components/main-page/main-page.component')
       .then((m) => m.MainPageComponent),
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'classroom/posts'
+      },
       {
         path: ':subjectname',
         children: [
@@ -92,9 +99,3 @@ const routes: Routes = [
       .then(m=>m.PageNotFoundComponent)
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
