@@ -62,6 +62,10 @@
         {
           "id": "OFrK5YN01z",
           "class_name": "Sociology"
+        },
+        {
+          "id": "dYTFTO5B8Z",
+          "class_name": "Algorithms"
         }
       ],
       "id": "accountid1"
@@ -75,6 +79,10 @@
         {
           "id": "OFrK5YN01z",
           "class_name": "Sociology"
+        },
+        {
+          "id": "dYTFTO5B8Z",
+          "class_name": "Algorithms"
         }
       ],
       "id": "accountid2"
@@ -88,6 +96,10 @@
         {
           "id": "OFrK5YN01z",
           "class_name": "Sociology"
+        },
+        {
+          "id": "dYTFTO5B8Z",
+          "class_name": "Algorithms"
         }
       ],
       "id": "accountid3"
@@ -148,118 +160,6 @@
             {
               "grade": 5,
               "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid4",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid5",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid6",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid7",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid8",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid9",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid10",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "Sorry pal",
               "date": "Tuesday, October 24, 2023"
             }
           ]
@@ -357,7 +257,41 @@
       "id": "jhwgU1fcRU"
     },
     {
-      "class_members": [],
+      "class_members": [
+        {
+          "member_id": "accountid3",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        }
+      ],
       "class_owner": {
         "owner_id": "accountid0",
         "owner_name": "Nikoloz Dvali"

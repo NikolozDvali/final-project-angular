@@ -53,7 +53,7 @@ export class GradesComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('mousewheel', ['$event'])
-  onMouseWheel(event: any) {
+  onMouseWheel(event: WheelEvent) {
     if (this.elementRef.nativeElement.querySelector('.grades-container:hover')) {
       this.elementRef.nativeElement.querySelector('.grades-container').scrollLeft += event.deltaY/10;
     }
