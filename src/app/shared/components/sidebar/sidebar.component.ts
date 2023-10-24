@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccountDataService } from '../../services/accountData/account-data.service';
 import { ClassNames } from '../../interfaces';
 import { ClassroomService } from '../../services/classroom/classroom.service';
 import { Router } from '@angular/router';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,12 +15,16 @@ import { PageControlService } from 'src/app/features/pages/services/pageControl/
   styleUrls: ['./sidebar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarComponent implements OnInit{
+export class SidebarComponent implements OnInit, OnDestroy{
   classes: ClassNames[] = [];
   name: string = '';
   accountId: string = '';
   status: string = 'Student';
   selectedClassId = '';
+
+  private classroomSubscription: Subscription | undefined;
+  private accountSubscription: Subscription | undefined;
+
 
   constructor(
     private accountService: AccountDataService,
@@ -30,7 +35,7 @@ export class SidebarComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    this.accountService.loggedInAccount.subscribe(
+    this.accountSubscription = this.accountService.loggedInAccount.subscribe(
       (newAcc)=>{
         this.classes = newAcc?.account_classes || [];
         this.name = newAcc?.account_name || '';
@@ -39,12 +44,17 @@ export class SidebarComponent implements OnInit{
         this.cdr.markForCheck();
       }
     )
-    this.classroomService.selectedClassId.subscribe(
+    this.classroomSubscription = this.classroomService.selectedClassId.subscribe(
       (newId)=>{
         this.selectedClassId = newId || '';
         this.cdr.markForCheck();
       }
     )
+  }
+
+  ngOnDestroy(){
+    this.accountSubscription?.unsubscribe();
+    this.classroomSubscription?.unsubscribe();
   }
 
   setSelectedClass(id: string){

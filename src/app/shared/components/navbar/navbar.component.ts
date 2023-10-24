@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 import { Router } from '@angular/router';
 import { AccountDataService } from '../../services/accountData/account-data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +13,13 @@ import { AccountDataService } from '../../services/accountData/account-data.serv
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit, OnDestroy{
   selectedPage = 'posts';
   accountStatus = 'Student';
   isInClassroom = false;
+
+  private pageSubscription: Subscription | undefined;
+  private accountSubscription: Subscription | undefined;
 
   constructor(
     private pageService: PageControlService,
@@ -25,13 +29,13 @@ export class NavbarComponent implements OnInit{
   ){}
 
   ngOnInit() {
-    this.pageService.getPage().subscribe(
+   this.pageSubscription = this.pageService.getPage().subscribe(
       (page)=>{
         this.selectedPage = page
         this.cdr.markForCheck();
       }
     )
-    this.accountService.loggedInAccount.subscribe(
+    this.accountSubscription = this.accountService.loggedInAccount.subscribe(
       (acc)=>{
         this.accountStatus = acc?.account_type || "Student";
         const classes = acc?.account_classes;
@@ -41,6 +45,11 @@ export class NavbarComponent implements OnInit{
         this.cdr.markForCheck();
       }
     )
+  }
+
+  ngOnDestroy(){
+    this.pageSubscription?.unsubscribe();
+    this.accountSubscription?.unsubscribe();
   }
 
   setSelectedPage(page: string){
