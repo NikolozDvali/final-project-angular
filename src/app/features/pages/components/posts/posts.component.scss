@@ -15,6 +15,7 @@
     padding-bottom: 40px;
 
     overflow-y: auto;
+    
 
 
     >div{
@@ -25,6 +26,7 @@
 
     .posts-header-wrapper{
         height: auto;
+        
 
         .post-header{
             width: 700px;
@@ -34,6 +36,14 @@
             display: grid;
             grid-template-columns: 1fr 57%; 
             overflow: hidden;
+
+            @media (max-width: 730px) {
+                width: 90%;
+            }
+
+            @media (max-width: 400px){
+                border-radius: 10px;
+            }
 
             .header-texts{
                 display: flex;
@@ -48,6 +58,26 @@
                 font-size: 30px;
                 color: white;
 
+                @media (max-width: 700px) and (min-width: 600px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 600px) and (min-width: 500px) {
+                    font-size: 18px;
+                }
+
+                @media (max-width: 500px) and (min-width: 400px) {
+                    font-size: 15px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 400px){
+                    border-radius: 10px;
+                }
+
                 .classname{
                     color: $primary-color;
                 }
@@ -61,10 +91,15 @@
 
     .feed-wrapper{
         width: 100%;
+        align-items: start;
 
         .feed{
             width: 700px;
             max-width: 700px;
+
+            @media (max-width: 730px) {
+                width: 90%;
+            }
 
             display: flex;
             flex-direction: column;
