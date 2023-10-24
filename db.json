@@ -28,6 +28,14 @@
       "account_password": "paroli22",
       "account_classes": [],
       "id": "accountid2"
+    },
+    {
+      "account_email": "raindinika@yahoo.com",
+      "account_name": "Giorgi Chalagashvili",
+      "account_password": "paroli99",
+      "account_type": "student",
+      "account_classes": [],
+      "id": "s4zevhxszr"
     }
   ],
   "classes": [

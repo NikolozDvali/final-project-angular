@@ -42,6 +42,7 @@ export class LoginComponent {
       (response)=>{
         if(response == undefined){
           this.showErrorMessage = true;
+          this.cdr.markForCheck();
         }else{
           this.accountService.setLoggedInAccout(response);
           this.showErrorMessage = false;
