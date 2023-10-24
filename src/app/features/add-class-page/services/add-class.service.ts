@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, mergeMap, throwError } from 'rxjs';
+import { Observable, catchError, map, mergeMap, of, throwError } from 'rxjs';
 import { ClassNames, IAccount, IClass } from 'src/app/shared/interfaces';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
 import { RandomService } from 'src/app/shared/services/random/random.service';
@@ -35,7 +35,7 @@ export class AddClassService {
       id: this.random.generateRandomId(10),
     };
 
-    return this.postRequest(this.classesUrl, classObj).pipe(
+    return this.http.post(this.classesUrl, classObj).pipe(
       catchError((err: HttpErrorResponse) => {
         return throwError(err); 
       }),
@@ -45,15 +45,17 @@ export class AddClassService {
           id: classObj.id,
         };
 
-        const newClassNamesArray: ClassNames[] = this.user?.account_classes as ClassNames[];
-        newClassNamesArray.push(newClassNameObj);
+        const newClassNamesArray: ClassNames[] = (this.user?.account_classes as ClassNames[]).concat(newClassNameObj);
 
         const patchData = {
           account_classes: newClassNamesArray,
         }
 
-        return this.patchRequest(this.accountsUrl+'/'+this.user?.id, patchData).pipe(
-          map(() => true),
+        return this.http.patch(this.accountsUrl+'/'+this.user?.id, patchData).pipe(
+          map(() => {
+            this.accountService.addClassroom(newClassNameObj);
+            return true;
+          }),
           catchError((err: HttpErrorResponse) => {
             return throwError(err);
           })
@@ -62,11 +64,4 @@ export class AddClassService {
     );
   }
 
-  postRequest(url: string, data: any): Observable<any> {
-    return this.http.post(url, data);
-  }
-
-  patchRequest(url: string, data: any): Observable<any> {
-    return this.http.patch(url, data);
-  }
 }

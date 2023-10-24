@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IAccount, loggedInAccount } from '../../interfaces';
+import { ClassNames, IAccount, loggedInAccount } from '../../interfaces';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -35,5 +35,21 @@ export class AccountDataService {
 
   isTeacher(){
     return this.loggedInAccount.value?.account_type=="Teacher";
+  }
+
+  addClassroom(classroom: ClassNames){
+    const prev = this.loggedInAccount.value;
+    if(!prev) return;
+    const prevClasses = prev?.account_classes;
+    const newClasses = prevClasses?.concat(classroom);
+
+    if(!newClasses) return;
+  
+    this.setLoggedInAccout(
+      {
+        ...prev,
+        account_classes: newClasses
+      }
+    )
   }
 }

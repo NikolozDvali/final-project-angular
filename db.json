@@ -7,24 +7,8 @@
       "account_password": "paroli00",
       "account_classes": [
         {
-          "id": "clasiid0",
-          "class_name": "Calculus"
-        },
-        {
-          "class_name": "History",
-          "id": "QRgNLlvtgJ"
-        },
-        {
           "class_name": "Sociology",
-          "id": "tC1CFT8Pmp"
-        },
-        {
-          "class_name": "Histology",
-          "id": "r0h6e4nAsb"
-        },
-        {
-          "class_name": "Paradigms",
-          "id": "5mLOcQXM79"
+          "id": "OFrK5YN01z"
         }
       ],
       "id": "accountid0"
@@ -34,24 +18,7 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
-      "account_classes": [
-        {
-          "id": "clasiid0",
-          "class_name": "Calculus"
-        },
-        {
-          "id": "QRgNLlvtgJ",
-          "class_name": "History"
-        },
-        {
-          "id": "tC1CFT8Pmp",
-          "class_name": "Sociology"
-        },
-        {
-          "id": "r0h6e4nAsb",
-          "class_name": "Histology"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid1"
     },
     {
@@ -59,124 +26,13 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli22",
-      "account_classes": [
-        {
-          "id": "clasiid0",
-          "class_name": "Calculus"
-        },
-        {
-          "id": "QRgNLlvtgJ",
-          "class_name": "History"
-        },
-        {
-          "id": "tC1CFT8Pmp",
-          "class_name": "Sociology"
-        },
-        {
-          "id": "r0h6e4nAsb",
-          "class_name": "Histology"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid2"
     }
   ],
   "classes": [
     {
-      "class_name": "Calculus",
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_members": [
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "Behaved well",
-              "date": "Monday, October 23, 2023"
-            },
-            {
-              "grade": 9,
-              "comment": "",
-              "date": "Monday, October 23, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Monday, October 23, 2023"
-            },
-            {
-              "grade": 3,
-              "comment": "",
-              "date": "Monday, October 23, 2023"
-            },
-            {
-              "grade": 3,
-              "comment": "",
-              "date": "Monday, October 23, 2023"
-            }
-          ]
-        }
-      ],
-      "class_posts": [
-        {
-          "post_title": "Hello",
-          "post_text": "Hello students. My name is Nikoloz Dvali and I will be teaching you calculus. Calculus is branch of math that is interested in continuity. Calculus was invented by two world famous scientists, Isaac Newton and Gotfried Leibniz. Two main concepts of calculus are Integrals and Derivatives. But, before we study those, we must learn limits first. So, for your first assignment, I want you to look up in the internet what are the limits.",
-          "post_date": "Monday, October 23, 2023",
-          "post_id": "lVLRW62bwl"
-        }
-      ],
-      "id": "clasiid0"
-    },
-    {
-      "class_members": [
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": []
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": []
-        }
-      ],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "History",
-      "class_posts": [
-        {
-          "post_title": "Hello",
-          "post_text": "Hi guys, welcome to history class",
-          "post_date": "Monday, October 23, 2023",
-          "post_id": "GEpyUHVwVm"
-        }
-      ],
-      "id": "QRgNLlvtgJ"
-    },
-    {
-      "class_members": [
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": []
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": []
-        }
-      ],
+      "class_members": [],
       "class_owner": {
         "owner_id": "accountid0",
         "owner_name": "Nikoloz Dvali"
@@ -184,50 +40,13 @@
       "class_name": "Sociology",
       "class_posts": [
         {
-          "post_title": "Hi",
-          "post_text": "Hello from the sociology class",
+          "post_title": "Hello",
+          "post_text": "Hello",
           "post_date": "Tuesday, October 24, 2023",
-          "post_id": "PbY6NQKbx0"
+          "post_id": "SK88VwKie2"
         }
       ],
-      "id": "tC1CFT8Pmp"
-    },
-    {
-      "class_members": [
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": []
-        }
-      ],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Histology",
-      "class_posts": [],
-      "id": "r0h6e4nAsb"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Paradigms",
-      "class_posts": [],
-      "id": "5mLOcQXM79"
+      "id": "OFrK5YN01z"
     }
   ]
 }
