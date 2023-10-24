@@ -1,3 +1,5 @@
+@import '../../../../shared/colors.scss';
+
 .wrapper{
     width: 100%;
     height: calc(100% - 70px);
@@ -67,7 +69,7 @@
                 &:first-of-type{
                     font-size: 20px;
                     font-weight: bold;
-                    color: #8D83C2;
+                    color: $primary-color;
                 }
 
                 &:nth-of-type(2){
@@ -77,7 +79,7 @@
                 &:nth-of-type(3){
                     font-size: 10px;
                     font-weight: bold;
-                    color: #8D83C2;
+                    color: $primary-color;
                 }
             }
         }

@@ -1,3 +1,4 @@
+@import '../../colors.scss';
 
 .wrapper{
     position: sticky;
@@ -8,7 +9,7 @@
     justify-content: center;
     align-items: center;
 
-    border-bottom: 1px solid #8D83C2;
+    border-bottom: 1px solid $primary-color;
     box-shadow: 0px 4px 4px 0px #00000040;
 
     font-family: "Knewave";
@@ -31,7 +32,7 @@
         color: black !important;
         text-decoration: none;
         color: inherit; 
-        border-bottom: 6px solid #8D83C2; 
+        border-bottom: 6px solid $primary-color; 
         padding: 0 10px;
     }
 }
