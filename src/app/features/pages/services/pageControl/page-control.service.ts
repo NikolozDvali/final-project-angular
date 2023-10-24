@@ -14,10 +14,12 @@ export class PageControlService {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const urlParts = event.url.split('/');
-        const lastPart = urlParts[urlParts.length - 1];
-        if(lastPart == 'posts' || lastPart == 'students' || lastPart == 'grades'){
-          this.updatePage(lastPart);
+        let lastPart = urlParts[urlParts.length - 1];
+        if(lastPart != 'posts' && lastPart != 'students' && lastPart != 'grades'){
+          lastPart = 'posts';
         }
+        this.updatePage(lastPart);
+        return;
       }
     });
 

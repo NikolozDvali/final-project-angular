@@ -67,7 +67,13 @@ const routes: Routes = [
             loadComponent:
               ()=>import('./features/pages/components/students/students.component')
               .then(m=>m.StudentsComponent)
-          }
+          },
+          {
+            path: '**',
+            loadComponent: 
+              ()=>import('./core/components/page-not-found/page-not-found.component')
+              .then(m=>m.PageNotFoundComponent)
+          },
         ]
       },
     ]
