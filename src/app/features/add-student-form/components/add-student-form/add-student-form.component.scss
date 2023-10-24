@@ -9,6 +9,10 @@
     align-items: center;
     padding: 10px;
     font-family: 'Lato';
+
+    @media (max-width: 620px) {
+        width: 90vw;
+    }
 }
 
 form {
@@ -17,11 +21,20 @@ form {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    
+    @media (max-width: 620px) {
+        flex-direction: column;
+        width: 90vw;
+    }
 }
 
 label {
     color: white;
     margin-right: 10px;
+
+    @media (max-width: 620px) {
+        text-align: center;
+    }
 }
 
 input[type="text"] {
