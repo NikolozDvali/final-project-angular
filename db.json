@@ -43,7 +43,7 @@
       "account_name": "Andria Dvali",
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
-      "account_password": "paroli22",
+      "account_password": "paroli33",
       "account_classes": [
         {
           "id": "OFrK5YN01z",
@@ -51,6 +51,19 @@
         }
       ],
       "id": "accountid3"
+    },
+    {
+      "account_name": "Andria Dvali",
+      "account_type": "Student",
+      "account_email": "ndval21@freeuni.edu.ge",
+      "account_password": "paroli44",
+      "account_classes": [
+        {
+          "id": "OFrK5YN01z",
+          "class_name": "Sociology"
+        }
+      ],
+      "id": "accountid4"
     }
   ],
   "classes": [
@@ -95,6 +108,22 @@
             {
               "grade": 5,
               "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid4",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            },
+            {
+              "grade": 7,
+              "comment": "Sorry pal",
               "date": "Tuesday, October 24, 2023"
             }
           ]
