@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,8 @@ import { AccountDataService } from '../../services/accountData/account-data.serv
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent implements OnInit{
   selectedPage = 'posts';
@@ -19,13 +20,15 @@ export class NavbarComponent implements OnInit{
   constructor(
     private pageService: PageControlService,
     private router: Router,
-    private accountService: AccountDataService
+    private accountService: AccountDataService,
+    private cdr: ChangeDetectorRef
   ){}
 
   ngOnInit() {
     this.pageService.getPage().subscribe(
       (page)=>{
         this.selectedPage = page
+        this.cdr.markForCheck();
       }
     )
     this.accountService.loggedInAccount.subscribe(
@@ -35,6 +38,7 @@ export class NavbarComponent implements OnInit{
         if(classes && classes?.length>0){
           this.isInClassroom = true;
         }
+        this.cdr.markForCheck();
       }
     )
   }

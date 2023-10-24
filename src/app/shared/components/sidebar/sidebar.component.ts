@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccountDataService } from '../../services/accountData/account-data.service';
 import { ClassNames } from '../../interfaces';
@@ -11,7 +11,8 @@ import { PageControlService } from 'src/app/features/pages/services/pageControl/
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent implements OnInit{
   classes: ClassNames[] = [];
@@ -24,7 +25,8 @@ export class SidebarComponent implements OnInit{
     private accountService: AccountDataService,
     private classroomService: ClassroomService,
     private router: Router,
-    private pageControl: PageControlService
+    private pageControl: PageControlService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -34,11 +36,13 @@ export class SidebarComponent implements OnInit{
         this.name = newAcc?.account_name || '';
         this.status = newAcc?.account_type || "Student";
         this.accountId = newAcc?.id || '';
+        this.cdr.markForCheck();
       }
     )
     this.classroomService.selectedClassId.subscribe(
       (newId)=>{
         this.selectedClassId = newId || '';
+        this.cdr.markForCheck();
       }
     )
   }

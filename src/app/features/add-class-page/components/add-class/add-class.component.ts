@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AccountDataService } from 'src/app/shared/services/accountData/account-data.service';
@@ -12,7 +12,8 @@ import { map } from 'rxjs';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-class.component.html',
-  styleUrls: ['./add-class.component.scss']
+  styleUrls: ['./add-class.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddClassComponent {
 
@@ -21,7 +22,7 @@ export class AddClassComponent {
     private accountService: AccountDataService,
     private classroomService: ClassroomService,
     private formBuilder: FormBuilder,
-    private addClassService: AddClassService
+    private addClassService: AddClassService,
   ){}
 
   goToMain(){

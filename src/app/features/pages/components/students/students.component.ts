@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassroomService } from 'src/app/shared/services/classroom/classroom.service';
 import { Grade, Member, Owner } from 'src/app/shared/interfaces';
@@ -12,7 +12,9 @@ import { AddStudentFormComponent } from 'src/app/features/add-student-form/compo
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, NewGradeFormComponent, AddStudentFormComponent],
   templateUrl: './students.component.html',
-  styleUrls: ['./students.component.scss']
+  styleUrls: ['./students.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class StudentsComponent implements OnInit{
   class_owner: Owner | undefined;
@@ -24,6 +26,7 @@ export class StudentsComponent implements OnInit{
   constructor(
     private classroomService: ClassroomService,
     private accountService: AccountDataService,
+    private cdr: ChangeDetectorRef
   ){}
 
   ngOnInit(){
@@ -31,11 +34,13 @@ export class StudentsComponent implements OnInit{
       (data)=>{
         this.class_members = data?.class_members || [];
         this.class_owner = data?.class_owner;
+        this.cdr.markForCheck();
       }
     )
     this.accountService.loggedInAccount.subscribe(
       (acc)=>{
         this.accountStatus = acc?.account_type || 'Status';
+        this.cdr.markForCheck();
       }
     )
   }

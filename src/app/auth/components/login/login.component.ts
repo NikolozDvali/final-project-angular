@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -12,7 +12,9 @@ import { PageControlService } from 'src/app/features/pages/services/pageControl/
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class LoginComponent {
   showErrorMessage = false;
@@ -23,7 +25,8 @@ export class LoginComponent {
     private accountService: AccountDataService,
     private router: Router,
     private classroomService: ClassroomService,
-    private pageService: PageControlService
+    private pageService: PageControlService,
+    private cdr: ChangeDetectorRef
   ){}
 
   login(){
@@ -49,6 +52,7 @@ export class LoginComponent {
           }else{
             this.router.navigate(['/main'])
           }
+        this.cdr.markForCheck();
         }
       }
     );

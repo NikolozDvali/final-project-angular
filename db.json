@@ -13,6 +13,18 @@
         {
           "class_name": "History",
           "id": "QRgNLlvtgJ"
+        },
+        {
+          "class_name": "Sociology",
+          "id": "tC1CFT8Pmp"
+        },
+        {
+          "class_name": "Histology",
+          "id": "r0h6e4nAsb"
+        },
+        {
+          "class_name": "Paradigms",
+          "id": "5mLOcQXM79"
         }
       ],
       "id": "accountid0"
@@ -30,6 +42,14 @@
         {
           "id": "QRgNLlvtgJ",
           "class_name": "History"
+        },
+        {
+          "id": "tC1CFT8Pmp",
+          "class_name": "Sociology"
+        },
+        {
+          "id": "r0h6e4nAsb",
+          "class_name": "Histology"
         }
       ],
       "id": "accountid1"
@@ -47,6 +67,14 @@
         {
           "id": "QRgNLlvtgJ",
           "class_name": "History"
+        },
+        {
+          "id": "tC1CFT8Pmp",
+          "class_name": "Sociology"
+        },
+        {
+          "id": "r0h6e4nAsb",
+          "class_name": "Histology"
         }
       ],
       "id": "accountid2"
@@ -135,6 +163,71 @@
         }
       ],
       "id": "QRgNLlvtgJ"
+    },
+    {
+      "class_members": [
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        }
+      ],
+      "class_owner": {
+        "owner_id": "accountid0",
+        "owner_name": "Nikoloz Dvali"
+      },
+      "class_name": "Sociology",
+      "class_posts": [
+        {
+          "post_title": "Hi",
+          "post_text": "Hello from the sociology class",
+          "post_date": "Tuesday, October 24, 2023",
+          "post_id": "PbY6NQKbx0"
+        }
+      ],
+      "id": "tC1CFT8Pmp"
+    },
+    {
+      "class_members": [
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        }
+      ],
+      "class_owner": {
+        "owner_id": "accountid0",
+        "owner_name": "Nikoloz Dvali"
+      },
+      "class_name": "Histology",
+      "class_posts": [],
+      "id": "r0h6e4nAsb"
+    },
+    {
+      "class_members": [],
+      "class_owner": {
+        "owner_id": "accountid0",
+        "owner_name": "Nikoloz Dvali"
+      },
+      "class_name": "Paradigms",
+      "class_posts": [],
+      "id": "5mLOcQXM79"
     }
   ]
 }

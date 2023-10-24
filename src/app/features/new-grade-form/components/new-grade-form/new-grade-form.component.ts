@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Grade } from 'src/app/shared/interfaces';
@@ -11,7 +11,9 @@ import { map } from 'rxjs';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './new-grade-form.component.html',
-  styleUrls: ['./new-grade-form.component.scss']
+  styleUrls: ['./new-grade-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class NewGradeFormComponent implements OnChanges{
   @Input() selectedStudentId: string | undefined;
@@ -22,7 +24,8 @@ export class NewGradeFormComponent implements OnChanges{
   constructor(
     private formBuilder: FormBuilder,
     private dateService: DateService,
-    private newGradeService: NewGradeService
+    private newGradeService: NewGradeService,
+    private cdr: ChangeDetectorRef
   ){}
 
   gradeForm = this.formBuilder.group(
@@ -57,6 +60,7 @@ export class NewGradeFormComponent implements OnChanges{
         this.errorMessage = '';
       }
       this.selectedStudentChangeEvent.emit(undefined);
+      this.cdr.markForCheck()
     }
    );
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewPostService } from '../../services/add-new-post/new-post.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -10,7 +10,9 @@ import { Post } from 'src/app/shared/interfaces';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './new-post-form.component.html',
-  styleUrls: ['./new-post-form.component.scss']
+  styleUrls: ['./new-post-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class NewPostFormComponent {
 
@@ -18,6 +20,7 @@ export class NewPostFormComponent {
     private formBuilder: FormBuilder,
     private postService: NewPostService,
     private dateService: DateService,
+    private cdr: ChangeDetectorRef
   ){}
 
   post(){

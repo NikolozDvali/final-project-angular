@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -11,7 +11,9 @@ import { RegisterService } from '../../services/register/register.service';
   standalone: true,
   imports: [CommonModule, RouterLink, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class RegisterComponent {
   showAccountExistsError = false;
@@ -19,7 +21,8 @@ export class RegisterComponent {
   constructor(
     private formBuilder: FormBuilder,
     private customValidators: CustomValidatorsService,
-    private registerService: RegisterService
+    private registerService: RegisterService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   register(){
@@ -41,6 +44,7 @@ export class RegisterComponent {
         }else{
           this.showAccountExistsError = true;
         }
+        this.cdr.markForCheck();
       }
     );
   }
