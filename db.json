@@ -18,7 +18,12 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "id": "OFrK5YN01z",
+          "class_name": "Sociology"
+        }
+      ],
       "id": "accountid1"
     },
     {
@@ -26,27 +31,87 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli22",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "id": "OFrK5YN01z",
+          "class_name": "Sociology"
+        }
+      ],
       "id": "accountid2"
     },
     {
-      "account_email": "raindinika@yahoo.com",
-      "account_name": "Giorgi Chalagashvili",
-      "account_password": "paroli99",
-      "account_type": "student",
-      "account_classes": [],
-      "id": "s4zevhxszr"
+      "account_name": "Andria Dvali",
+      "account_type": "Student",
+      "account_email": "ndval21@freeuni.edu.ge",
+      "account_password": "paroli22",
+      "account_classes": [
+        {
+          "id": "OFrK5YN01z",
+          "class_name": "Sociology"
+        }
+      ],
+      "id": "accountid3"
     }
   ],
   "classes": [
     {
-      "class_members": [],
+      "class_members": [
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 10,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 1,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            },
+            {
+              "grade": 7,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        },
+        {
+          "member_id": "accountid3",
+          "member_name": "Andria Dvali",
+          "member_grades": [
+            {
+              "grade": 5,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            },
+            {
+              "grade": 5,
+              "comment": "",
+              "date": "Tuesday, October 24, 2023"
+            }
+          ]
+        }
+      ],
       "class_owner": {
         "owner_id": "accountid0",
         "owner_name": "Nikoloz Dvali"
       },
       "class_name": "Sociology",
       "class_posts": [
+        {
+          "post_title": "Hi",
+          "post_text": "Hi",
+          "post_date": "Tuesday, October 24, 2023",
+          "post_id": "0AqJG7vKs7"
+        },
         {
           "post_title": "Hello",
           "post_text": "Hello",

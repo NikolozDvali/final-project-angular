@@ -15,7 +15,7 @@ import { map } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 
 })
-export class NewGradeFormComponent implements OnChanges{
+export class NewGradeFormComponent implements OnChanges {
   @Input() selectedStudentId: string | undefined;
   @Output() selectedStudentChangeEvent = new EventEmitter<string | undefined>();
 
@@ -26,13 +26,13 @@ export class NewGradeFormComponent implements OnChanges{
     private dateService: DateService,
     private newGradeService: NewGradeService,
     private cdr: ChangeDetectorRef
-  ){}
+  ) { }
 
   gradeForm = this.formBuilder.group(
     {
       studentId: ['', Validators.required],
       grade: [10, [Validators.required, Validators.max(10), Validators.min(0)]],
-      comment: ['', ],
+      comment: ['',],
     }
   )
 
@@ -42,9 +42,8 @@ export class NewGradeFormComponent implements OnChanges{
     }
   }
 
-  addGrade(){
+  addGrade() {
     const formValue = this.gradeForm.value;;
-    this.gradeForm.reset();
 
     const grade: Grade = {
       grade: formValue.grade || 0,
@@ -52,16 +51,18 @@ export class NewGradeFormComponent implements OnChanges{
       date: this.dateService.getCurrentDate(),
     }
 
-   this.newGradeService.addNewGrade(this.selectedStudentId || '', grade).subscribe(
-    (resp)=>{
-      if(resp!=='SUCCESS'){
-        this.errorMessage = resp;
-      }else{
-        this.errorMessage = '';
+    this.newGradeService.addNewGrade(this.gradeForm.value.studentId || this.selectedStudentId || '', grade).subscribe(
+      (resp) => {
+        if (resp !== 'SUCCESS') {
+          this.errorMessage = resp;
+        } else {
+          this.errorMessage = '';
+        }
+        this.selectedStudentChangeEvent.emit(undefined);
+        this.cdr.markForCheck()
       }
-      this.selectedStudentChangeEvent.emit(undefined);
-      this.cdr.markForCheck()
-    }
-   );
+    );
+
+    this.gradeForm.reset();
   }
 }
