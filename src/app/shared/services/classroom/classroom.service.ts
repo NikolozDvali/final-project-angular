@@ -45,7 +45,10 @@ export class ClassroomService {
     )
   }
 
-  setSelectedClassId(id: string){
+  setSelectedClassId(id: string | undefined){
+    if(!id){
+      id = '';
+    }
     localStorage.setItem("selectedClassId", id);
     this.selectedClassId.next(id);
   }

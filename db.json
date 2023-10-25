@@ -5,7 +5,12 @@
       "account_type": "Teacher",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli00",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "class_name": "Math",
+          "id": "gvPscrazhP"
+        }
+      ],
       "id": "accountid0"
     },
     {
@@ -13,7 +18,12 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "id": "gvPscrazhP",
+          "class_name": "Math"
+        }
+      ],
       "id": "accountid1"
     },
     {
@@ -21,7 +31,12 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli22",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "id": "gvPscrazhP",
+          "class_name": "Math"
+        }
+      ],
       "id": "accountid2"
     },
     {
@@ -29,7 +44,12 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli33",
-      "account_classes": [],
+      "account_classes": [
+        {
+          "id": "gvPscrazhP",
+          "class_name": "Math"
+        }
+      ],
       "id": "accountid3"
     },
     {
@@ -41,5 +61,32 @@
       "id": "accountid4"
     }
   ],
-  "classes": []
+  "classes": [
+    {
+      "class_members": [
+        {
+          "member_id": "accountid1",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        },
+        {
+          "member_id": "accountid2",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        },
+        {
+          "member_id": "accountid3",
+          "member_name": "Andria Dvali",
+          "member_grades": []
+        }
+      ],
+      "class_owner": {
+        "owner_id": "accountid0",
+        "owner_name": "Nikoloz Dvali"
+      },
+      "class_name": "Math",
+      "class_posts": [],
+      "id": "gvPscrazhP"
+    }
+  ]
 }

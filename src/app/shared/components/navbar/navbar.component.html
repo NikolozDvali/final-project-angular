@@ -1,8 +1,8 @@
 <div class="wrapper">
-    <div class="anchors" *ngIf="isInClassroom">
+    <div class="anchors" *ngIf="isInClassroom && isLoadedClassroom" >
         <a [ngClass]="{ 'selected': selectedPage === 'posts' }" (click)="setSelectedPage('posts')">Posts</a>
         <a *ngIf="accountStatus=='Student'" [ngClass]="{ 'selected': selectedPage === 'grades' }" (click)="setSelectedPage('grades')">Grades</a>
         <a [ngClass]="{ 'selected': selectedPage === 'students' }" (click)="setSelectedPage('students')">Students</a>
     </div>
-    <button (click)="deleteCurrentClassroom()" *ngIf="accountStatus=='Teacher'">Delete Classroom</button>
+    <button (click)="deleteCurrentClassroom()" *ngIf="accountStatus=='Teacher' && isLoadedClassroom">Delete Classroom</button>
 </div>

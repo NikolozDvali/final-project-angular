@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AccountDataService } from '../../services/accountData/account-data.service';
 import { Subscription, map } from 'rxjs';
 import { DeleteClassService } from '../../services/deleteClass/delete-class.service';
+import { ClassroomService } from '../../services/classroom/classroom.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,16 +19,19 @@ export class NavbarComponent implements OnInit, OnDestroy{
   selectedPage = 'posts';
   accountStatus = 'Student';
   isInClassroom = false;
+  isLoadedClassroom = false;
 
   private pageSubscription: Subscription | undefined;
   private accountSubscription: Subscription | undefined;
+  private classroomSubscription: Subscription | undefined;
 
   constructor(
     private pageService: PageControlService,
     private router: Router,
     private accountService: AccountDataService,
     private cdr: ChangeDetectorRef,
-    private deleteClassService: DeleteClassService
+    private deleteClassService: DeleteClassService,
+    private classroomService: ClassroomService
   ){}
 
   ngOnInit() {
@@ -43,6 +47,16 @@ export class NavbarComponent implements OnInit, OnDestroy{
         const classes = acc?.account_classes;
         if(classes && classes?.length>0){
           this.isInClassroom = true;
+        }
+        this.cdr.markForCheck();
+      }
+    )
+    this.classroomService.selectedClassId.subscribe(
+      (data)=>{
+        if(data){
+          this.isLoadedClassroom = true;
+        }else{
+          this.isLoadedClassroom = false;
         }
         this.cdr.markForCheck();
       }
