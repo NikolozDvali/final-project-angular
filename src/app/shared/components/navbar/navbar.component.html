@@ -4,4 +4,5 @@
         <a *ngIf="accountStatus=='Student'" [ngClass]="{ 'selected': selectedPage === 'grades' }" (click)="setSelectedPage('grades')">Grades</a>
         <a [ngClass]="{ 'selected': selectedPage === 'students' }" (click)="setSelectedPage('students')">Students</a>
     </div>
+    <button *ngIf="accountStatus=='Teacher'">Delete Classroom</button>
 </div>
