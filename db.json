@@ -5,52 +5,7 @@
       "account_type": "Teacher",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli00",
-      "account_classes": [
-        {
-          "class_name": "Sociology",
-          "id": "OFrK5YN01z"
-        },
-        {
-          "class_name": "History",
-          "id": "OzYj5UinQZ"
-        },
-        {
-          "class_name": "Math",
-          "id": "X5UQLiayyI"
-        },
-        {
-          "class_name": "French",
-          "id": "uSynMBbPpg"
-        },
-        {
-          "class_name": "Statistics",
-          "id": "XTf2tXunEp"
-        },
-        {
-          "class_name": "Calculus",
-          "id": "GsFlbaof4I"
-        },
-        {
-          "class_name": "Paradigms",
-          "id": "dfrMgX1sSK"
-        },
-        {
-          "class_name": "Italian",
-          "id": "jhwgU1fcRU"
-        },
-        {
-          "class_name": "Algorithms",
-          "id": "dYTFTO5B8Z"
-        },
-        {
-          "class_name": "Data Bases",
-          "id": "vICrm7qdjY"
-        },
-        {
-          "class_name": "German",
-          "id": "0PRpSnSEfA"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid0"
     },
     {
@@ -58,16 +13,7 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli11",
-      "account_classes": [
-        {
-          "id": "OFrK5YN01z",
-          "class_name": "Sociology"
-        },
-        {
-          "id": "dYTFTO5B8Z",
-          "class_name": "Algorithms"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid1"
     },
     {
@@ -75,16 +21,7 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli22",
-      "account_classes": [
-        {
-          "id": "OFrK5YN01z",
-          "class_name": "Sociology"
-        },
-        {
-          "id": "dYTFTO5B8Z",
-          "class_name": "Algorithms"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid2"
     },
     {
@@ -92,16 +29,7 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli33",
-      "account_classes": [
-        {
-          "id": "OFrK5YN01z",
-          "class_name": "Sociology"
-        },
-        {
-          "id": "dYTFTO5B8Z",
-          "class_name": "Algorithms"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid3"
     },
     {
@@ -109,216 +37,9 @@
       "account_type": "Student",
       "account_email": "ndval21@freeuni.edu.ge",
       "account_password": "paroli44",
-      "account_classes": [
-        {
-          "id": "OFrK5YN01z",
-          "class_name": "Sociology"
-        }
-      ],
+      "account_classes": [],
       "id": "accountid4"
     }
   ],
-  "classes": [
-    {
-      "class_members": [
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 1,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 7,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid3",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 5,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            },
-            {
-              "grade": 5,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        }
-      ],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Sociology",
-      "class_posts": [
-        {
-          "post_title": "Hi",
-          "post_text": "Hi",
-          "post_date": "Tuesday, October 24, 2023",
-          "post_id": "0AqJG7vKs7"
-        },
-        {
-          "post_title": "Hello",
-          "post_text": "Hello",
-          "post_date": "Tuesday, October 24, 2023",
-          "post_id": "SK88VwKie2"
-        }
-      ],
-      "id": "OFrK5YN01z"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "History",
-      "class_posts": [],
-      "id": "OzYj5UinQZ"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Math",
-      "class_posts": [],
-      "id": "X5UQLiayyI"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "French",
-      "class_posts": [],
-      "id": "uSynMBbPpg"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Statistics",
-      "class_posts": [],
-      "id": "XTf2tXunEp"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Calculus",
-      "class_posts": [],
-      "id": "GsFlbaof4I"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Paradigms",
-      "class_posts": [],
-      "id": "dfrMgX1sSK"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Italian",
-      "class_posts": [],
-      "id": "jhwgU1fcRU"
-    },
-    {
-      "class_members": [
-        {
-          "member_id": "accountid3",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid1",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        },
-        {
-          "member_id": "accountid2",
-          "member_name": "Andria Dvali",
-          "member_grades": [
-            {
-              "grade": 10,
-              "comment": "",
-              "date": "Tuesday, October 24, 2023"
-            }
-          ]
-        }
-      ],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Algorithms",
-      "class_posts": [],
-      "id": "dYTFTO5B8Z"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "Data Bases",
-      "class_posts": [],
-      "id": "vICrm7qdjY"
-    },
-    {
-      "class_members": [],
-      "class_owner": {
-        "owner_id": "accountid0",
-        "owner_name": "Nikoloz Dvali"
-      },
-      "class_name": "German",
-      "class_posts": [],
-      "id": "0PRpSnSEfA"
-    }
-  ]
+  "classes": []
 }

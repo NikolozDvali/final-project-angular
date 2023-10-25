@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PageControlService } from 'src/app/features/pages/services/pageControl/page-control.service';
 import { Router } from '@angular/router';
 import { AccountDataService } from '../../services/accountData/account-data.service';
-import { Subscription } from 'rxjs';
+import { Subscription, map } from 'rxjs';
+import { DeleteClassService } from '../../services/deleteClass/delete-class.service';
 
 @Component({
   selector: 'app-navbar',
@@ -25,7 +26,8 @@ export class NavbarComponent implements OnInit, OnDestroy{
     private pageService: PageControlService,
     private router: Router,
     private accountService: AccountDataService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private deleteClassService: DeleteClassService
   ){}
 
   ngOnInit() {
@@ -60,6 +62,14 @@ export class NavbarComponent implements OnInit, OnDestroy{
     urlParts[urlParts.length - 1] = page;
     const newUrl = urlParts.join('/');
     this.router.navigateByUrl(newUrl);
+  }
+
+  deleteCurrentClassroom(){
+    let confirmation = confirm("You are about to delete current classroom");
+    if(confirmation){
+      this.deleteClassService.deleteCurrentClass();
+
+    }
   }
   
 }
